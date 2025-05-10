@@ -84,6 +84,16 @@
   --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
+/* Add your styles here */
+
+/* Footer Styles */
+@import url('footer.css');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 /* Base styles */
 * {
   box-sizing: border-box;

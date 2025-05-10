@@ -500,4 +500,57 @@
     });
   </script>
 </body>
-</html>
+<footer class="footer glass-footer">
+  
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+  <!-- Theme Switcher -->
+  <script src="js/dark-mode-fix.js"></script>
+  <script>
+    // Form validation and submission handling
+    document.addEventListener('DOMContentLoaded', function() {
+      const demoForm = document.getElementById('demoRequestForm');
+      
+      demoForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Basic validation
+        const requiredFields = demoForm.querySelectorAll('[required]');
+        let valid = true;
+        
+        requiredFields.forEach(field => {
+          if (!field.value.trim()) {
+            valid = false;
+            field.classList.add('error');
+          } else {
+            field.classList.remove('error');
+          }
+        });
+        
+        if (valid) {
+          // Show success message (in real implementation, would submit to backend)
+          demoForm.innerHTML = `
+            <div class="form-success">
+              <div class="form-success-icon">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <h3>Thank You!</h3>
+              <p>Your demo request has been submitted successfully. One of our specialists will contact you within 24 hours to schedule your personalized demo.</p>
+            </div>
+          `;
+          
+          // In real implementation, would send form data to server here
+        }
+      });
+      
+      // Remove error class on input
+      demoForm.querySelectorAll('input, select, textarea').forEach(element => {
+        element.addEventListener('input', function() {
+          this.classList.remove('error');
+        });
+      });
+    });
+  </script>
+</body>
+</footer>
+</body>

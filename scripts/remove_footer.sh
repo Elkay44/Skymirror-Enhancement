@@ -1,29 +1,22 @@
 #!/bin/bash
 
-# Script to add footer to all HTML files
-# Usage: ./add_footer.sh [options]
+# Script to remove footer from all HTML files
+# Usage: ./remove_footer.sh [options]
 # Options:
-#   -f, --force     Force update even if footer exists
 #   -v, --verbose   Show detailed progress
 #   -n, --dry-run   Show what would be done without making changes
 
 # Get script directory
 SCRIPT_DIR="$(dirname "$(realpath "$0")")"
 PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
-FOOTER_FILE="$PROJECT_DIR/components/footer.html"
 
 # Default options
-FORCE=false
 VERBOSE=false
 DRY_RUN=false
 
 # Parse command line arguments
 while [[ $# -gt 0 ]]; do
     case $1 in
-        -f|--force)
-            FORCE=true
-            shift
-            ;;
         -v|--verbose)
             VERBOSE=true
             shift
@@ -46,8 +39,8 @@ log() {
     fi
 }
 
-# Function to add footer to a file
-add_footer() {
+# Function to remove footer from a file
+remove_footer() {
     local file=$1
     local backup_file="$file.bak"
     
@@ -61,50 +54,33 @@ add_footer() {
     cp "$file" "$backup_file"
     log "debug" "Created backup: $backup_file"
 
-    # Read footer content
-    FOOTER_CONTENT=$(cat "$FOOTER_FILE")
-
-    # Check if footer already exists
-    if grep -q "footer glass-footer" "$file" && [ "$FORCE" = false ]; then
-        log "info" "Footer already exists in $file (use -f to force update)"
+    # Check if footer exists
+    if ! grep -q "footer glass-footer" "$file"; then
+        log "info" "No footer found in $file"
         return 0
     fi
 
-    # Check for closing body tag
-    if ! grep -q "</body>" "$file"; then
-        log "error" "Error: No closing body tag found in $file"
-        return 1
-    fi
-
-    # Add footer
+    # Remove footer
     if [ "$DRY_RUN" = false ]; then
-        # Create temporary file with footer content
-        temp_file=$(mktemp)
-        echo "$FOOTER_CONTENT" > "$temp_file"
+        # Get content before footer
+        sed '/<footer class="footer glass-footer"/q' "$file" > "$temp_file".part1
         
-        # Get content before </body>
-        sed '/<\/body>/q' "$file" > "$temp_file".part1
-        
-        # Get content after </body>
-        sed -n '/<\/body>/,$p' "$file" > "$temp_file".part2
+        # Get content after footer
+        sed -n '/<\/footer>/,/<\/body>/p' "$file" | tail -n +2 > "$temp_file".part2
         
         # Combine parts
-        cat "$temp_file".part1 "$temp_file" "$temp_file".part2 > "$file"
-        
-        # Clean up temporary files
-        rm "$temp_file" "$temp_file".part1 "$temp_file".part2
+        cat "$temp_file".part1 "$temp_file".part2 > "$file"
         
         if [ $? -eq 0 ]; then
-            log "success" "Successfully added footer to $file"
+            log "success" "Successfully removed footer from $file"
         else
-            log "error" "Error adding footer to $file"
-            # Restore backup on error
+            log "error" "Error removing footer from $file"
             cp "$backup_file" "$file"
             rm "$backup_file"
             return 1
         fi
     else
-        log "info" "Would add footer to $file"
+        log "info" "Would remove footer from $file"
     fi
 
     # Clean up backup if successful
@@ -126,7 +102,7 @@ CURRENT_FILE=0
 for file in "${HTML_FILES[@]}"; do
     CURRENT_FILE=$((CURRENT_FILE + 1))
     log "info" "Processing file $CURRENT_FILE/$TOTAL_FILES: $file"
-    add_footer "$file"
+    remove_footer "$file"
 done
 
 log "info" "All files processed."

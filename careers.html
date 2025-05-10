@@ -545,4 +545,42 @@
     });
   </script>
 </body>
-</html>
+<footer class="footer glass-footer">
+  
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+  <!-- Theme Switcher -->
+  <script src="js/dark-mode-fix.js"></script>
+  <script>
+    // Job filtering functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const departmentFilter = document.getElementById('departmentFilter');
+      const locationFilter = document.getElementById('locationFilter');
+      const jobCategories = document.querySelectorAll('.job-category');
+      const jobPostings = document.querySelectorAll('.job-posting');
+      
+      function filterJobs() {
+        const department = departmentFilter.value;
+        const location = locationFilter.value;
+        
+        // Simple filtering for demo purposes
+        // In a real implementation, this would filter based on data attributes
+        
+        if (department === 'all' && location === 'all') {
+          jobCategories.forEach(category => category.style.display = 'block');
+          jobPostings.forEach(posting => posting.style.display = 'block');
+        } else {
+          // This is a simplified version - in a real implementation,
+          // you would filter based on actual data attributes on the elements
+          // For demonstration purposes only
+          console.log(`Filter applied: Department=${department}, Location=${location}`);
+        }
+      }
+      
+      departmentFilter.addEventListener('change', filterJobs);
+      locationFilter.addEventListener('change', filterJobs);
+    });
+  </script>
+</body>
+</footer>
+</body>

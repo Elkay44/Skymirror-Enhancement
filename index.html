@@ -601,4 +601,33 @@
   <!-- Theme Switcher -->
   <script src="js/dark-mode-fix.js"></script>
 </body>
-</html>
+<footer class="footer glass-footer">
+  
+  <!-- JavaScript -->
+  <script>
+    // Mobile menu toggle
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      document.querySelector('.navbar-links').classList.toggle('active');
+    });
+    
+    // Simple scroll reveal animation
+    window.addEventListener('scroll', function() {
+      const elements = document.querySelectorAll('.section, .feature-card, .step, .hero-feature');
+      
+      elements.forEach(function(element) {
+        const position = element.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.2;
+        
+        if(position < screenPosition) {
+          element.classList.add('fade-in');
+        }
+      });
+    });
+  </script>
+  <!-- Main JS -->
+  <script src="js/main.js"></script>
+  <!-- Theme Switcher -->
+  <script src="js/dark-mode-fix.js"></script>
+</body>
+</footer>
+</body>

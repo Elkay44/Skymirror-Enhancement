@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CheckMet AI – Demo</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,700|Poppins:600,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {margin:0;font-family:'Inter','Poppins',Arial,sans-serif;background:linear-gradient(120deg,#0f2027 0%,#2c5364 100%);color:#1a1a1a;min-height:100vh;overflow-x:hidden;}
+    .navbar {display:flex;justify-content:space-between;align-items:center;padding:1.7rem 5vw 1.2rem 5vw;background:rgba(255,255,255,0.13);backdrop-filter:blur(12px);border-bottom:1.5px solid rgba(255,255,255,0.12);position:sticky;top:0;z-index:10;}
+    .logo {font-family:'Poppins',Arial,sans-serif;font-weight:800;font-size:2rem;letter-spacing:2px;color:#2563eb;text-shadow:0 2px 8px #2563eb22;}
+    nav {display:flex;gap:2.2rem;}
+    nav a {color:#fff;text-decoration:none;font-weight:600;font-size:1.08rem;transition:color 0.2s;position:relative;}
+    nav a::after {content:'';display:block;height:2px;width:0;background:linear-gradient(90deg,#2563eb,#00e676);transition:width 0.2s;position:absolute;left:0;bottom:-4px;}
+    nav a:hover::after {width:100%;}
+    .site-footer {background:linear-gradient(90deg,#2563eb 0%,#00e676 100%);color:#fff;padding:2.2rem 0 1.2rem 0;text-align:center;margin-top:3.5rem;}
+    .footer-content {display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:2.5rem;margin-bottom:1.3rem;}
+    .footer-logo {font-family:'Poppins',Arial,sans-serif;font-weight:800;font-size:1.4rem;color:#fff;letter-spacing:2px;}
+    .footer-links {display:flex;gap:1.7rem;}
+    .footer-links a {color:#fff;text-decoration:none;font-weight:600;opacity:0.92;transition:opacity 0.2s;}
+    .footer-links a:hover {opacity:1;text-decoration:underline;}
+    .footer-social {display:flex;gap:1.2rem;}
+    .footer-social-icon {font-size:1.5rem;color:#fff;opacity:0.85;transition:opacity 0.2s;}
+    .footer-social-icon:hover {opacity:1;}
+    .demo-hero {display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;padding:3vw 2vw 2vw 2vw;background:linear-gradient(120deg,#2563eb33 0%,#00e67611 100%);position:relative;overflow:hidden;}
+    .demo-hero-title {font-family:'Poppins',Arial,sans-serif;font-size:2.3rem;font-weight:800;color:#fff;margin:0 0 1.2rem 0;letter-spacing:-1px;line-height:1.1;text-shadow:0 2px 24px #2563eb55;}
+    .demo-hero-subtitle {font-size:1.13rem;color:#e0f2fe;margin-bottom:2rem;font-weight:500;opacity:0.95;max-width:600px;}
+    .demo-hero-visual {margin:2.5rem auto 1.5rem auto;max-width:340px;width:100%;border-radius:1.2rem;box-shadow:0 6px 24px rgba(41,121,255,0.15);background:#fff;overflow:hidden;position:relative;}
+    .demo-hero-visual img {width:100%;display:block;border-radius:1.2rem;}
+    .demo-section {margin:3.5rem auto 2.5rem auto;max-width:540px;width:100%;background:rgba(255,255,255,0.27);border-radius:1.5rem;box-shadow:0 4px 24px 0 rgba(41,121,255,0.10);padding:2rem 1.2rem;text-align:center;position:relative;}
+    .demo-section svg {width:90%;max-width:400px;height:120px;margin:0 auto;display:block;}
+    .demo-benefits {display:flex;flex-wrap:wrap;justify-content:center;gap:2.2rem;margin:3rem 0 2rem 0;}
+    .demo-benefit-card {background:rgba(255,255,255,0.23);border-radius:1.5rem;padding:2rem 1.4rem 1.4rem 1.4rem;min-width:220px;box-shadow:0 4px 24px 0 rgba(41,121,255,0.13);text-align:center;border:2px solid transparent;transition:border 0.2s,transform 0.2s;cursor:pointer;}
+    .demo-benefit-card:hover {border-color:#00e676;transform:translateY(-4px) scale(1.04);}
+    .demo-benefit-icon {font-size:2.7rem;color:#2563eb;margin-bottom:0.7rem;}
+    .demo-benefit-title {font-weight:800;font-size:1.2rem;color:#2563eb;margin-bottom:0.4rem;}
+    .demo-benefit-desc {color:#1a1a1a;opacity:0.88;font-size:1.01rem;}
+    .trusted-row {display:flex;align-items:center;justify-content:center;gap:2rem;margin:2.2rem 0 1.2rem 0;}
+    .trusted-label {color:#fff;font-weight:700;font-size:1.1rem;opacity:0.85;margin-right:0.7rem;}
+    .trusted-row img {max-width:90px;max-height:36px;filter:grayscale(1) brightness(1.1);opacity:0.8;margin:0 auto;display:block;}
+    .testimonial {background:rgba(255,255,255,0.18);border-radius:1.2rem;padding:1.1rem 1.4rem;color:#fff;font-size:1.13rem;font-style:italic;margin:1.5rem auto 0 auto;max-width:540px;box-shadow:0 2px 14px 0 #2563eb22;}
+    .testimonial-author {font-weight:700;color:#00e676;font-style:normal;margin-left:0.5rem;}
+    @media (max-width:900px) {.demo-benefits{flex-direction:column;align-items:center;gap:1.5rem;}}
+    @media (max-width:600px) {.navbar{flex-direction:column;align-items:flex-start;padding:1.2rem 5vw 1rem 5vw;}nav{gap:1.1rem;}.demo-hero-title{font-size:1.7rem;}.demo-hero-subtitle{font-size:1rem;}.trusted-row{gap:1rem;flex-wrap:wrap;}.demo-benefits{gap:1rem;}.demo-benefit-card{width:95vw;max-width:350px;}}
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <span class="logo">CheckMet AI</span>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="demo.html">Demo</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+  <section class="demo-hero">
+    <div class="demo-hero-title">Try CheckMet AI Live</div>
+    <div class="demo-hero-subtitle">Experience the future of attendance management. Try our interactive demo and see how CheckMet AI can transform your workflow in seconds.</div>
+    <div class="demo-hero-visual">
+      <img src="logo.svg" alt="CheckMet AI Demo" style="height:90px;display:block;margin:0 auto;" />
+    </div>
+  </section>
+  <section class="demo-section">
+    <h2 style="font-family:'Poppins',Arial,sans-serif;font-size:1.4rem;color:#2563eb;font-weight:700;margin-bottom:1.2rem;">Interactive Demo Preview</h2>
+    <svg viewBox="0 0 400 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="20" y="20" width="360" height="80" rx="18" fill="#2563eb11" stroke="#2563eb" stroke-width="2"/>
+      <rect x="40" y="40" width="60" height="40" rx="8" fill="#00e676"/>
+      <rect x="120" y="50" width="100" height="20" rx="6" fill="#2563eb"/>
+      <rect x="240" y="55" width="90" height="10" rx="5" fill="#2563eb" fill-opacity="0.5"/>
+      <rect x="340" y="60" width="20" height="10" rx="5" fill="#00e676" fill-opacity="0.7"/>
+    </svg>
+    <div style="color:#64748b;font-size:1rem;margin-top:1rem;">Try out our AI-powered dashboard—live, simple, beautiful.</div>
+  </section>
+  <section class="demo-benefits">
+    <div class="demo-benefit-card">
+      <span class="demo-benefit-icon" aria-label="Instant Setup">⚡</span>
+      <div class="demo-benefit-title">Instant Setup</div>
+      <div class="demo-benefit-desc">No downloads, no hassle—get started in seconds.</div>
+    </div>
+    <div class="demo-benefit-card">
+      <span class="demo-benefit-icon" aria-label="Real Data">📈</span>
+      <div class="demo-benefit-title">Real Data</div>
+      <div class="demo-benefit-desc">See actual analytics and attendance flows in action.</div>
+    </div>
+    <div class="demo-benefit-card">
+      <span class="demo-benefit-icon" aria-label="Support">💬</span>
+      <div class="demo-benefit-title">Live Support</div>
+      <div class="demo-benefit-desc">Questions? Our team is here to help during your trial.</div>
+    </div>
+  </section>
+  <div class="trusted-row">
+    <span class="trusted-label">Trusted by:</span>
+    <img src="logo.svg" alt="CheckMet logo" style="height:44px;filter:drop-shadow(0 2px 8px #2563eb22);"/>
+    <img src="logo.svg" alt="CheckMet logo" style="height:44px;filter:grayscale(1) brightness(1.1);opacity:0.85;"/>
+    <img src="logo.svg" alt="CheckMet logo" style="height:44px;opacity:0.7;"/>
+    <img src="logo.svg" alt="CheckMet logo" style="height:44px;opacity:0.6;"/>
+  </div>
+  <blockquote class="testimonial">
+    “The live demo convinced our team instantly—CheckMet AI is the real deal.”<br><span class="testimonial-author">– Priya Singh, COO</span>
+  </blockquote>
+  <footer class="site-footer" style="background: linear-gradient(90deg,#2563eb 0%,#00e676 100%); color: #fff; padding: 2.2rem 0 1.2rem 0; text-align: center; margin-top: 3.5rem; box-shadow: 0 -2px 24px 0 rgba(41,121,255,0.12); border-top-left-radius: 2rem; border-top-right-radius: 2rem;">
+  <div style="font-size: 1.1rem; opacity: 0.93;">&copy; 2025 CheckMet. All rights reserved.</div>
+</footer>
+</body>
+</html>
+</body>
+</html>

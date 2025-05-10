@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CheckMet AI – Features</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,700|Poppins:600,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {margin:0;font-family:'Inter','Poppins',Arial,sans-serif;background:linear-gradient(120deg,#0f2027 0%,#2c5364 100%);color:#1a1a1a;min-height:100vh;overflow-x:hidden;}
+    .navbar {display:flex;justify-content:space-between;align-items:center;padding:1.7rem 5vw 1.2rem 5vw;background:rgba(255,255,255,0.13);backdrop-filter:blur(12px);border-bottom:1.5px solid rgba(255,255,255,0.12);position:sticky;top:0;z-index:10;}
+    .logo {font-family:'Poppins',Arial,sans-serif;font-weight:800;font-size:2rem;letter-spacing:2px;color:#2563eb;text-shadow:0 2px 8px #2563eb22;}
+    nav {display:flex;gap:2.2rem;}
+    nav a {color:#fff;text-decoration:none;font-weight:600;font-size:1.08rem;transition:color 0.2s;position:relative;}
+    nav a::after {content:'';display:block;height:2px;width:0;background:linear-gradient(90deg,#2563eb,#00e676);transition:width 0.2s;position:absolute;left:0;bottom:-4px;}
+    nav a:hover::after {width:100%;}
+    .site-footer {background:linear-gradient(90deg,#2563eb 0%,#00e676 100%);color:#fff;padding:2.2rem 0 1.2rem 0;text-align:center;margin-top:3.5rem;}
+    .footer-content {display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:2.5rem;margin-bottom:1.3rem;}
+    .footer-logo {font-family:'Poppins',Arial,sans-serif;font-weight:800;font-size:1.4rem;color:#fff;letter-spacing:2px;}
+    .footer-links {display:flex;gap:1.7rem;}
+    .footer-links a {color:#fff;text-decoration:none;font-weight:600;opacity:0.92;transition:opacity 0.2s;}
+    .footer-links a:hover {opacity:1;text-decoration:underline;}
+    .footer-social {display:flex;gap:1.2rem;}
+    .footer-social-icon {font-size:1.5rem;color:#fff;opacity:0.85;transition:opacity 0.2s;}
+    .footer-social-icon:hover {opacity:1;}
+    .features-hero {display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:50vh;padding:3vw 2vw 2vw 2vw;background:linear-gradient(120deg,#2563eb33 0%,#00e67611 100%);position:relative;overflow:hidden;}
+    .features-hero-title {font-family:'Poppins',Arial,sans-serif;font-size:2.3rem;font-weight:800;color:#fff;margin:0 0 1.2rem 0;letter-spacing:-1px;line-height:1.1;text-shadow:0 2px 24px #2563eb55;}
+    .features-hero-subtitle {font-size:1.13rem;color:#e0f2fe;margin-bottom:2rem;font-weight:500;opacity:0.95;max-width:600px;}
+    .features-hero-visual {margin:2.5rem auto 1.5rem auto;max-width:340px;width:100%;border-radius:1.2rem;box-shadow:0 6px 24px rgba(41,121,255,0.15);background:#fff;overflow:hidden;position:relative;}
+    .features-hero-visual svg {width:100%;display:block;border-radius:1.2rem;}
+    .features-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem;max-width:1000px;margin:3rem auto 2rem auto;padding:0 2vw;}
+    .feature-card {background:rgba(255,255,255,0.23);border-radius:1.5rem;padding:2rem 1.4rem 1.4rem 1.4rem;box-shadow:0 4px 24px 0 rgba(41,121,255,0.13);text-align:center;border:2px solid transparent;transition:border 0.2s,transform 0.2s;cursor:pointer;}
+    .feature-card:hover {border-color:#00e676;transform:translateY(-4px) scale(1.04);}
+    .feature-icon {font-size:2.4rem;color:#2563eb;margin-bottom:0.7rem;}
+    .feature-title {font-weight:800;font-size:1.17rem;color:#2563eb;margin-bottom:0.4rem;}
+    .feature-desc {color:#1a1a1a;opacity:0.88;font-size:1.01rem;}
+    .trusted-row {display:flex;align-items:center;justify-content:center;gap:2rem;margin:2.2rem 0 1.2rem 0;}
+    .trusted-label {color:#fff;font-weight:700;font-size:1.1rem;opacity:0.85;margin-right:0.7rem;}
+    .trusted-row img {max-width:90px;max-height:36px;filter:grayscale(1) brightness(1.1);opacity:0.8;margin:0 auto;display:block;}
+    .testimonial {background:rgba(255,255,255,0.18);border-radius:1.2rem;padding:1.1rem 1.4rem;color:#fff;font-size:1.13rem;font-style:italic;margin:1.5rem auto 0 auto;max-width:540px;box-shadow:0 2px 14px 0 #2563eb22;}
+    .testimonial-author {font-weight:700;color:#00e676;font-style:normal;margin-left:0.5rem;}
+    @media (max-width:900px) {.features-grid{grid-template-columns:1fr;gap:1.5rem;}}
+    @media (max-width:600px) {.navbar{flex-direction:column;align-items:flex-start;padding:1.2rem 5vw 1rem 5vw;}nav{gap:1.1rem;}.features-hero-title{font-size:1.7rem;}.features-hero-subtitle{font-size:1rem;}.trusted-row{gap:1rem;flex-wrap:wrap;}.features-grid{gap:1rem;}.feature-card{width:95vw;max-width:350px;}}
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <span class="logo">CheckMet AI</span>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="demo.html">Demo</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+  <section class="features-hero">
+    <div class="features-hero-title">Features That Set Us Apart</div>
+    <div class="features-hero-subtitle">Discover the advanced capabilities that make CheckMet AI the premier solution for effortless, secure, and insightful attendance management.</div>
+    <div class="features-hero-visual">
+      <svg viewBox="0 0 340 100" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="20" width="320" height="60" rx="18" fill="#2563eb11" stroke="#2563eb" stroke-width="2"/><rect x="30" y="35" width="50" height="30" rx="8" fill="#00e676"/><rect x="100" y="45" width="80" height="15" rx="6" fill="#2563eb"/><rect x="200" y="50" width="70" height="8" rx="5" fill="#2563eb" fill-opacity="0.5"/><rect x="280" y="55" width="20" height="8" rx="5" fill="#00e676" fill-opacity="0.7"/></svg>
+    </div>
+  </section>
+  <section class="features-grid">
+    <div class="feature-card">
+      <span class="feature-icon" aria-label="AI Accuracy">🤖</span>
+      <div class="feature-title">AI-Powered Accuracy</div>
+      <div class="feature-desc">99.9% recognition accuracy, powered by advanced machine learning.</div>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon" aria-label="Speed">⚡</span>
+      <div class="feature-title">Instant Check-Ins</div>
+      <div class="feature-desc">Attendance in under 1 second—no queues, no waiting.</div>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon" aria-label="Security">🔒</span>
+      <div class="feature-title">Enterprise-Grade Security</div>
+      <div class="feature-desc">End-to-end encryption and GDPR-compliant privacy controls.</div>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon" aria-label="Device Flexibility">📱</span>
+      <div class="feature-title">Device Flexibility</div>
+      <div class="feature-desc">Works seamlessly on mobile, tablet, or desktop.</div>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon" aria-label="Analytics">📊</span>
+      <div class="feature-title">Live Analytics</div>
+      <div class="feature-desc">Real-time dashboards and actionable insights at your fingertips.</div>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon" aria-label="Integrations">🔗</span>
+      <div class="feature-title">Easy Integrations</div>
+      <div class="feature-desc">Connect with your favorite HR and payroll tools in minutes.</div>
+    </div>
+  </section>
+  <div class="trusted-row">
+    <span class="trusted-label">Trusted by:</span>
+    <img src="logo.svg" alt="CheckMet logo" style="height:44px;filter:drop-shadow(0 2px 8px #2563eb22);"/>
+    <img src="logo.svg" alt="CheckMet logo" style="height:44px;filter:grayscale(1) brightness(1.1);opacity:0.85;"/>
+    <img src="logo.svg" alt="CheckMet logo" style="height:44px;opacity:0.7;"/>
+    <img src="logo.svg" alt="CheckMet logo" style="height:44px;opacity:0.6;"/>
+  </div>
+  <blockquote class="testimonial">
+    “The features are simply unmatched—CheckMet AI made our HR team’s life so much easier.”<br><span class="testimonial-author">– Alex Kim, HR Manager</span>
+  </blockquote>
+  <footer class="site-footer" style="background: linear-gradient(90deg,#2563eb 0%,#00e676 100%); color: #fff; padding: 2.2rem 0 1.2rem 0; text-align: center; margin-top: 3.5rem; box-shadow: 0 -2px 24px 0 rgba(41,121,255,0.12); border-top-left-radius: 2rem; border-top-right-radius: 2rem;">
+  <div style="font-size: 1.1rem; opacity: 0.93;">&copy; 2025 CheckMet. All rights reserved.</div>
+    <div class="footer-content">
+      <div class="footer-logo">CheckMet AI</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="demo.html">Demo</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Twitter" class="footer-social-icon">🐦</a>
+        <a href="#" aria-label="LinkedIn" class="footer-social-icon">💼</a>
+        <a href="#" aria-label="Facebook" class="footer-social-icon">📘</a>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      &copy; 2025 <b style="color:#00e676;">CheckMet</b>. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Features | Checkmet AI</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,600,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Sticky Navigation Bar -->
+  <div class="navbar sticky-navbar">
+    <span class="logo">CheckMet AI</span>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="demo.html">Demo</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+  <div class="navbar">
+    <span class="logo">CheckMet AI</span>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="features.html">Features</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="integrations.html">Integrations</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="resources.html">Resources</a>
+      <a href="support.html">Support</a>
+      <a href="contact.html">Contact</a>
+      <a href="demo.html" class="cta-btn">Request a Demo</a>
+    </nav>
+  </div>
+  <section class="features-section glassy">
+    <h1>Features</h1>
+    <div class="features-group">
+      <div class="feature-block">
+        <h2>Effortless Tracking</h2>
+        <div class="feature-icons">
+          <span class="feature-icon">&#128100;</span>
+          <span class="feature-desc">Facial Precision</span>
+          <span class="feature-icon">&#128241;</span>
+          <span class="feature-desc">Mobile Ready</span>
+        </div>
+      </div>
+      <div class="feature-block">
+        <h2>Intelligent Insights</h2>
+        <div class="feature-icons">
+          <span class="feature-icon">&#128200;</span>
+          <span class="feature-desc">Real-time Data</span>
+          <span class="feature-icon">&#128196;</span>
+          <span class="feature-desc">Custom Reports</span>
+        </div>
+      </div>
+      <div class="feature-block">
+        <h2>Fortified Security</h2>
+        <div class="feature-icons">
+          <span class="feature-icon">&#128274;</span>
+          <span class="feature-desc">Data Encryption</span>
+          <span class="feature-icon">&#128737;</span>
+          <span class="feature-desc">GDPR Compliant</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

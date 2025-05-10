@@ -1,212 +1,400 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SkyMirror Solutions - Quantum Computing Solutions">
-    <meta name="keywords" content="SkyMirror, quantum computing, solutions, technology">
-    <meta name="author" content="SkyMirror Solutions">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="SkyMirror Solutions">
-    <meta property="og:description" content="Leading quantum computing solutions provider">
-    <meta property="og:image" content="https://skymirror.com/images/og-image.jpg">
-    <title>SkyMirror Solutions</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- CSS Libraries -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/theme.css">
-    <link rel="stylesheet" href="css/toast.css">
-    <link rel="stylesheet" href="css/loading.css">
-    <link rel="stylesheet" href="css/modal.css">
-    <link rel="stylesheet" href="css/form-validation.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CheckMet AI – Effortless Attendance, Reinvented</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,700|Poppins:600,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Poppins', Arial, sans-serif;
+      background: linear-gradient(120deg, #0f2027 0%, #2c5364 100%);
+      color: #1a1a1a;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.7rem 5vw 1.2rem 5vw;
+      background: rgba(255,255,255,0.13);
+      backdrop-filter: blur(12px);
+      border-bottom: 1.5px solid rgba(255,255,255,0.12);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .logo {
+      font-family: 'Poppins', Arial, sans-serif;
+      font-weight: 800;
+      font-size: 2rem;
+      letter-spacing: 2px;
+      color: #2563eb;
+      text-shadow: 0 2px 8px #2563eb22;
+    }
+    nav {
+      display: flex;
+      gap: 2.2rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.08rem;
+      transition: color 0.2s;
+      position: relative;
+    }
+    nav a::after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 0;
+      background: linear-gradient(90deg,#2563eb,#00e676);
+      transition: width 0.2s;
+      position: absolute;
+      left: 0; bottom: -4px;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    .cta-main {
+      background: linear-gradient(90deg,#2563eb,#00e676);
+      color: #fff;
+      font-weight: 700;
+      border: none;
+      border-radius: 2rem;
+      padding: 0.9rem 2.2rem;
+      font-size: 1.15rem;
+      cursor: pointer;
+      box-shadow: 0 4px 24px 0 rgba(41,121,255,0.18);
+      transition: background 0.2s, transform 0.2s;
+      border: 1.5px solid rgba(255,255,255,0.18);
+      margin-left: 1.5rem;
+    }
+    .cta-main:hover {
+      background: linear-gradient(90deg,#00e676,#2563eb);
+      transform: translateY(-2px) scale(1.04);
+    }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 90vh;
+      padding: 4vw 2vw 2vw 2vw;
+      background: linear-gradient(120deg, #2563eb33 0%, #00e67611 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg-anim {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.18;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 650px;
+      text-align: center;
+      margin: 0 auto;
+    }
+    .hero-title {
+      font-family: 'Poppins', Arial, sans-serif;
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #fff;
+      margin: 0 0 1.2rem 0;
+      letter-spacing: -1px;
+      line-height: 1.1;
+      text-shadow: 0 2px 24px #2563eb55;
+    }
+    .hero-subtitle {
+      font-size: 1.35rem;
+      color: #e0f2fe;
+      margin-bottom: 2rem;
+      font-weight: 500;
+      opacity: 0.95;
+    }
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.1rem;
+      justify-content: center;
+      margin-bottom: 2.7rem;
+    }
+    .hero-visual {
+      margin: 2.5rem auto 1.5rem auto;
+      max-width: 420px;
+      width: 100%;
+      border-radius: 1.2rem;
+      box-shadow: 0 6px 24px rgba(41,121,255,0.15);
+      background: #fff;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero-visual img, .hero-visual video {
+      width: 100%;
+      display: block;
+      border-radius: 1.2rem;
+    }
+    .trusted-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2.2rem 0 1.2rem 0;
+    }
+    .trusted-label {
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.1rem;
+      opacity: 0.85;
+      margin-right: 0.7rem;
+    }
+    .trusted-row img {
+      max-width: 90px;
+      max-height: 36px;
+      filter: grayscale(1) brightness(1.1);
+      opacity: 0.8;
+      margin: 0 auto;
+      display: block;
+    }
+    .testimonial {
+      background: rgba(255,255,255,0.18);
+      border-radius: 1.2rem;
+      padding: 1.1rem 1.4rem;
+      color: #fff;
+      font-size: 1.13rem;
+      font-style: italic;
+      margin: 1.5rem auto 0 auto;
+      max-width: 540px;
+      box-shadow: 0 2px 14px 0 #2563eb22;
+    }
+    .testimonial-author {
+      font-weight: 700;
+      color: #00e676;
+      font-style: normal;
+      margin-left: 0.5rem;
+    }
+    .benefits-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2.2rem;
+      margin: 3rem 0 2rem 0;
+    }
+    .benefit-card {
+      background: rgba(255,255,255,0.23);
+      border-radius: 1.5rem;
+      padding: 2rem 1.4rem 1.4rem 1.4rem;
+      min-width: 220px;
+      box-shadow: 0 4px 24px 0 rgba(41,121,255,0.13);
+      text-align: center;
+      border: 2px solid transparent;
+      transition: border 0.2s, transform 0.2s;
+      cursor: pointer;
+    }
+    .benefit-card:hover {
+      border-color: #00e676;
+      transform: translateY(-4px) scale(1.04);
+    }
+    .benefit-icon {
+      font-size: 2.7rem;
+      color: #2563eb;
+      margin-bottom: 0.7rem;
+    }
+    .benefit-title {
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: #2563eb;
+      margin-bottom: 0.4rem;
+    }
+    .benefit-desc {
+      color: #1a1a1a;
+      opacity: 0.88;
+      font-size: 1.01rem;
+    }
+    .product-preview {
+      margin: 3.5rem auto 2.5rem auto;
+      max-width: 540px;
+      width: 100%;
+      background: rgba(255,255,255,0.27);
+      border-radius: 1.5rem;
+      box-shadow: 0 4px 24px 0 rgba(41,121,255,0.10);
+      padding: 2rem 1.2rem;
+      text-align: center;
+      position: relative;
+    }
+    .product-preview svg {
+      width: 90%;
+      max-width: 400px;
+      height: 120px;
+      margin: 0 auto;
+      display: block;
+    }
+    .site-footer {
+      background: linear-gradient(90deg,#2563eb 0%,#00e676 100%);
+      color: #fff;
+      padding: 2.2rem 0 1.2rem 0;
+      text-align: center;
+      margin-top: 3.5rem;
+    }
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2.5rem;
+      margin-bottom: 1.3rem;
+    }
+    .footer-logo {
+      font-family: 'Poppins', Arial, sans-serif;
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: #fff;
+      letter-spacing: 2px;
+    }
+    .footer-links {
+      display: flex;
+      gap: 1.7rem;
+    }
+    .footer-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      opacity: 0.92;
+      transition: opacity 0.2s;
+    }
+    .footer-links a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+    .footer-social {
+      display: flex;
+      gap: 1.2rem;
+    }
+    .footer-social-icon {
+      font-size: 1.5rem;
+      color: #fff;
+      opacity: 0.85;
+      transition: opacity 0.2s;
+    }
+    .footer-social-icon:hover {
+      opacity: 1;
+    }
+    @media (max-width: 900px) {
+      .benefits-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+      }
+      .hero {
+        min-height: 70vh;
+        padding: 2vw 1vw 2vw 1vw;
+      }
+    }
+    @media (max-width: 600px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.2rem 5vw 1rem 5vw;
+      }
+      nav {
+        gap: 1.1rem;
+      }
+      .hero-title {
+        font-size: 2rem;
+      }
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+      .trusted-row {
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .benefits-section {
+        gap: 1rem;
+      }
+      .benefit-card {
+        width: 95vw;
+        max-width: 350px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Theme Toggle -->
-    <button class="theme-toggle" aria-label="Toggle theme"></button>
+  <div class="navbar">
+    <span class="logo">CheckMet AI</span>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#features">Features</a>
+      <a href="demo.html">Demo</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
 
-    <!-- Preloader -->
-    <div class="preloader">
-        <div class="loader">
-            <div class="span"></div>
-        </div>
+  <section class="hero">
+    <svg class="hero-bg-anim" viewBox="0 0 1440 320"><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#00e676"/></linearGradient></defs><path fill="url(#g1)" fill-opacity=".4" d="M0,160L60,149.3C120,139,240,117,360,122.7C480,128,600,160,720,181.3C840,203,960,213,1080,197.3C1200,181,1320,139,1380,117.3L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+    <div class="hero-content">
+      <div class="hero-title">Effortless Attendance, Reinvented</div>
+      <div class="hero-subtitle">AI-powered, secure, and lightning-fast. CheckMet AI automates your attendance—so you can focus on what matters most.</div>
+      <div class="hero-cta-row">
+        <a href="demo.html" class="cta-main">Get Started Free</a>
+        <a href="contact.html" class="cta-main" style="background:linear-gradient(90deg,#fff,#2563eb);color:#2563eb;">Request a Demo</a>
+      </div>
+      <div class="hero-visual">
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80" alt="AI Attendance Concept" />
+      </div>
+      <div class="trusted-row">
+        <span class="trusted-label">Trusted by:</span>
+        <img src="logo.svg" alt="CheckMet logo" style="height:44px;filter:drop-shadow(0 2px 8px #2563eb22);"/>
+        <img src="logo.svg" alt="CheckMet logo" style="height:44px;filter:grayscale(1) brightness(1.1);opacity:0.85;"/>
+        <img src="logo.svg" alt="CheckMet logo" style="height:44px;opacity:0.7;"/>
+        <img src="logo.svg" alt="CheckMet logo" style="height:44px;opacity:0.6;"/>
+      </div>
+      <blockquote class="testimonial">
+        “CheckMet AI is a game-changer—setup was a breeze and accuracy is unmatched.”<br><span class="testimonial-author">– Jane Doe, HR Director</span>
+      </blockquote>
     </div>
+  </section>
 
-    <!-- Header -->
-    <header class="header-area">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-3">
-                    <div class="logo">
-                        <a href="index.html">
-                            <img src="images/logo.png" alt="SkyMirror Solutions">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-9">
-                    <div class="nav-menu">
-                        <nav class="mainmenu">
-                            <ul>
-                                <li class="active"><a href="index.html">Home</a></li>
-                                <li><a href="solutions.html">Solutions</a></li>
-                                <li><a href="technology.html">Technology</a></li>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
-                        </nav>
-                        <div class="nav-right">
-                            <a href="contact.html" class="primary-btn">Get Started</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="mobile-menu"></div>
-                </div>
-            </div>
-        </div>
-    </header>
+  <section id="features" class="benefits-section">
+    <div class="benefit-card">
+      <span class="benefit-icon" aria-label="Lightning Fast">⚡</span>
+      <div class="benefit-title">Lightning Fast</div>
+      <div class="benefit-desc">Check-ins in under 1 second. No waiting, ever.</div>
+    </div>
+    <div class="benefit-card">
+      <span class="benefit-icon" aria-label="Unrivaled Security">🔒</span>
+      <div class="benefit-title">Unrivaled Security</div>
+      <div class="benefit-desc">GDPR-compliant, encrypted, and privacy-first.</div>
+    </div>
+    <div class="benefit-card">
+      <span class="benefit-icon" aria-label="Device Flexibility">📱</span>
+      <div class="benefit-title">Device Flexibility</div>
+      <div class="benefit-desc">Works on any device—mobile, tablet, or desktop.</div>
+    </div>
+  </section>
 
-    <!-- Hero Section -->
-    <section class="hero-section set-bg" data-setbg="images/hero-bg.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="hero-text">
-                        <h2>Engineering Global Impact Through Strategic Excellence</h2>
-                        <p>Leading the quantum revolution in enterprise technology</p>
-                        <a href="contact.html" class="primary-btn">Get Started</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section class="product-preview">
+    <h2 style="font-family:'Poppins',Arial,sans-serif;font-size:1.4rem;color:#2563eb;font-weight:700;margin-bottom:1.2rem;">See CheckMet AI in Action</h2>
+    <svg viewBox="0 0 400 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="20" y="20" width="360" height="80" rx="18" fill="#2563eb11" stroke="#2563eb" stroke-width="2"/>
+      <rect x="40" y="40" width="60" height="40" rx="8" fill="#00e676"/>
+      <rect x="120" y="50" width="100" height="20" rx="6" fill="#2563eb"/>
+      <rect x="240" y="55" width="90" height="10" rx="5" fill="#2563eb" fill-opacity="0.5"/>
+      <rect x="340" y="60" width="20" height="10" rx="5" fill="#00e676" fill-opacity="0.7"/>
+    </svg>
+    <div style="color:#64748b;font-size:1rem;margin-top:1rem;">AI-powered attendance dashboard: live, simple, beautiful.</div>
+  </section>
 
-    <!-- Features Section -->
-    <section class="features-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-item">
-                        <div class="fi-icon">
-                            <i class="flaticon-001-quantum-computing"></i>
-                        </div>
-                        <h4>Quantum Computing</h4>
-                        <p>Next-generation computing solutions for complex problem solving</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-item">
-                        <div class="fi-icon">
-                            <i class="flaticon-002-artificial-intelligence"></i>
-                        </div>
-                        <h4>Artificial Intelligence</h4>
-                        <p>Advanced AI solutions for predictive analytics and automation</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-item">
-                        <div class="fi-icon">
-                            <i class="flaticon-003-blockchain"></i>
-                        </div>
-                        <h4>Blockchain</h4>
-                        <p>Secure, transparent, and decentralized enterprise solutions</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer-section">
-        <div class="container">
-            <div class="footer-top">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="footer-widget">
-                            <h3>About Us</h3>
-                            <p>Engineering Global Impact Through Strategic Excellence</p>
-                            <div class="social-links">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="footer-widget">
-                            <h3>Quick Links</h3>
-                            <ul>
-                                <li><a href="solutions.html"><i class="fas fa-cogs"></i>Solutions</a></li>
-                                <li><a href="technology.html"><i class="fas fa-rocket"></i>Technology</a></li>
-                                <li><a href="about.html"><i class="fas fa-info-circle"></i>About</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="footer-widget">
-                            <h3>Contact Us</h3>
-                            <ul class="contact-info">
-                                <li><i class="fas fa-phone"></i>+1 (234) 567-890</li>
-                                <li><i class="fas fa-envelope"></i>info@skymirror.com</li>
-                                <li><i class="fas fa-map-marker-alt"></i>123 Technology Ave, Silicon Valley, CA</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="copyright-text">
-                            <p>&copy; 2025 SkyMirror Solutions. All rights reserved.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="footer-links">
-                            <a href="terms-of-service.html">Terms & Conditions</a>
-                            <a href="privacy-policy.html">Privacy Policy</a>
-                            <a href="register.html">Register</a>
-                            <a href="partners.html">Partners</a>
-                            <a href="careers.html">Careers</a>
-                            <a href="jobs.html">Jobs</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.countdown.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/theme.js"></script>
-    <script src="js/scroll-animations.js"></script>
-    <script src="js/toast.js"></script>
-    <script src="js/loading.js"></script>
-    <script src="js/modal.js"></script>
-    <script src="js/form-validation.js"></script>
+  <footer class="site-footer" style="background: linear-gradient(90deg,#2563eb 0%,#00e676 100%); color: #fff; padding: 2.2rem 0 1.2rem 0; text-align: center; margin-top: 3.5rem; box-shadow: 0 -2px 24px 0 rgba(41,121,255,0.12); border-top-left-radius: 2rem; border-top-right-radius: 2rem;">
+  <div style="font-size: 1.1rem; opacity: 0.93;">&copy; 2025 CheckMet. All rights reserved.</div>
+</footer>
 </body>
 </html>

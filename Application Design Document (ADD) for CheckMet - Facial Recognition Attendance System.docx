@@ -1,0 +1,206 @@
+Application Design Document (ADD) for CheckMet - Facial Recognition
+Attendance System
+1. Introduction
+CheckMet is an advanced facial recognition attendance management system designed to
+streamline employee attendance tracking at the workplace. By leveraging the Anviz FaceDeep
+3 hardware for real-time facial scanning, CheckMet allows employees to simply walk into the
+office, have their face scanned, and their attendance automatically recorded. The system is
+intuitive, flexible, and ensures accurate, secure, and frictionless attendance management.
+This document outlines the key functionalities, features, and expectations of the software to
+ensure a smooth development process.
+2. System Overview
+Hardware Integration:
+●
+●
+Device: Anviz FaceDeep 3 biometric facial recognition device.
+Functionality: Scans employee faces upon entry, records attendance, and syncs the
+data with the software.
+Software Type:
+●
+●
+Web-Based Application: Accessible through browsers for administrators, HR
+managers, and employees.
+Mobile-Compatible: Optimized for mobile viewing for quick access by managers and
+admins.
+Users:
+●
+●
+●
+Admins: Full control over employee data, configurations, and system settings.
+HR Managers: Manage employee records, attendance, and reports.
+Employees: Walk into the workplace, have their face scanned, and attendance
+automatically recorded.
+Primary Goals:
+●
+●
+●
+Automate attendance tracking via facial recognition.
+Provide real-time attendance insights and analytics.
+Improve operational efficiency by eliminating manual attendance processes.
+3. Core Functionalities
+3.1 Main Dashboard
+●
+Real-Time Analytics:
+○
+Display attendance data for the day: total attendance, late arrivals, absenteeism,
+etc.
+○
+Show a live count of employees currently inside the workplace.
+○
+Graphical views of attendance trends (e.g., charts, tables).
+○
+Notifications for late arrivals, missed check-ins, or anomalies.
+3.2 Attendance Tracking
+●
+●
+Facial Recognition Integration:
+○
+Employees walk in, and their face is scanned automatically by FaceDeep 3.
+○
+Attendance is recorded in real time without any manual input.
+○
+Detailed logs of each check-in, including timestamp, location, and device used.
+○
+Ability to track employees across multiple entrances or locations.
+Sync and Data Storage:
+○
+Data is synced with the backend immediately after each scan.
+○
+Employees' check-in times are stored with the option for viewing logs at any time.
+3.3 Employee Management
+●
+●
+Employee Enrollment:
+○
+Admins add employee profiles with biometric data (face recognition).
+○
+Employees can be categorized by department, shift, or work location.
+Employee Status:
+○
+See attendance status (present, absent, late, etc.) for each employee.
+3.4 Leave & Absence Management*************feature
+●
+Leave Requests:
+○
+Employees can request leaves (vacation, sick days, etc.) through the system.
+○
+HR managers can approve or deny leave requests directly within the app.
+○
+Attendance is automatically updated once leave requests are approved.
+3.5 Admin Panel
+●
+●
+Device Management:
+○
+Manage multiple FaceDeep 3 devices if the workplace has several entrance
+points.
+○
+Configure device settings (e.g., face recognition sensitivity).
+Attendance Rules & Configurations:
+●
+○
+Set up attendance policies, grace periods, and work schedules.
+○
+Adjust time rounding rules (e.g., round up to nearest 5 minutes).
+User Role Management:
+○
+Define access levels (Admin, HR, Supervisor, Employee) for different users of the
+system.
+○
+Admin access includes full control over the system, while other roles have
+restricted access based on permissions.
+4. Key Features
+4.1 Data Export & Reporting
+●
+●
+●
+Generate Reports: Automatically generate and export attendance data in CSV, Excel,
+or PDF formats.
+Scheduled Reports: Automated daily, weekly, or monthly attendance reports sent via
+email.
+Custom Reports: Filter attendance data by date, employee, department, or location to
+generate detailed reports.
+4.2 Notifications & Alerts
+●
+●
+Real-Time Alerts:
+○
+Alert admins and HR managers when employees arrive late, miss check-ins, or
+leave early.
+○
+Notify supervisors of missed or failed facial scans.
+Push Notifications:
+○
+Alerts for approvals, rejections, system errors, or updates related to attendance.
+4.3 Integration & API Support***********Feature
+●
+●
+Third-Party Integration:
+○
+Webhooks & Real-Time Data:
+○
+Open API for integration with payroll systems, HRMS, or ERP systems.
+Enable real-time push of attendance data to other systems via webhooks.
+4.4 User Experience & Accessibility
+●
+●
+Mobile-Friendly:
+○
+Employees and managers can access the system through mobile devices to view
+attendance logs, request leaves, and generate reports.
+Customization:
+○
+Dashboards and reports are customizable based on the user’s role.
+○
+Option to switch between dark mode and light mode for improved user
+experience.
+4.5 Security & Compliance
+●
+●
+●
+Data Encryption:
+○
+End-to-end encryption ensures that biometric and attendance data is secure both
+in transit and at rest.
+Multi-Factor Authentication (MFA):
+○
+Enforce MFA for admin users to add an extra layer of security for access control.
+GDPR Compliance:
+○
+Ensure that the system complies with GDPR and data protection regulations,
+particularly in handling biometric data.
+5. System Architecture
+5.1 Technology Stack
+●
+●
+●
+●
+●
+Frontend: React.js or Vue.js to build an intuitive, responsive user interface.
+Backend: Node.js or Python (Django/Flask) to build a robust backend capable of
+handling real-time data from the hardware.
+Database: PostgreSQL for structured data storage or MongoDB for a NoSQL option.
+Cloud Hosting: Use AWS, Azure, or Google Cloud for scalability and reliability.
+Authentication: OAuth 2.0 for token-based authentication.
+6. Future Enhancements
+●
+●
+●
+AI-Based Attendance Fraud Detection:
+○
+Detect and prevent fraudulent activities such as "buddy punching" or face
+masking.
+Geo-Fencing:
+○
+Implement geo-fencing to ensure attendance is only recorded within predefined
+work locations or areas.
+Offline Mode:
+○
+Enable offline functionality with automatic syncing when devices are reconnected
+to the network.
+7. Conclusion
+CheckMet revolutionizes the traditional attendance system by utilizing cutting-edge facial
+recognition technology through Anviz FaceDeep 3. Employees no longer need to manually
+clock in or out; their attendance is automatically recorded as they walk into the office. With a
+user-friendly interface, real-time data, and strong security, CheckMet enhances workplace
+efficiency and ensures a seamless attendance management experienc

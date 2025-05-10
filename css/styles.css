@@ -102,6 +102,7 @@ body {
   color: var(--neutral-700);
   letter-spacing: -0.01em;
   overflow-x: hidden;
+  padding-top: 60px;
 }
 
 a {
@@ -164,10 +165,13 @@ button, .btn {
 
 /* Navbar */
 .navbar {
-  padding: 1rem 0;
-  position: sticky;
+  padding: 0.75rem 0;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
+  background: var(--white);
   box-shadow: var(--shadow-md);
 }
 
@@ -178,6 +182,7 @@ button, .btn {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
+  gap: 1rem;
 }
 
 .navbar-logo {
@@ -1803,6 +1808,43 @@ button, .btn {
 .testimonial-role {
   font-size: 0.875rem;
   color: var(--neutral-500);
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 4rem 0 3rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: var(--white);
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+  text-align: left;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
 }
 
 /* CTA section */

@@ -1,0 +1,153 @@
+:root {
+    --primary: #0066ff;
+    --secondary: #004d99;
+    --accent: #ff6600;
+    --background: #1a1a1a;
+    --surface: #2d2d2d;
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --border: #404040;
+    --shadow: rgba(0, 0, 0, 0.3);
+    --radius: 12px;
+    --radius-full: 24px;
+    --glass-opacity: 0.15;
+}
+
+/* Dark mode overrides */
+body.dark-theme {
+    background-color: var(--background);
+    color: var(--text-primary);
+}
+
+/* Navigation */
+.navbar.dark-theme {
+    background-color: var(--surface);
+    box-shadow: 0 4px 6px var(--shadow);
+}
+
+.navbar-link.dark-theme {
+    color: var(--text-secondary);
+}
+
+.navbar-link.dark-theme:hover {
+    color: var(--primary);
+}
+
+/* Buttons */
+.btn.dark-theme {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn.dark-theme:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Cards */
+.glass-card.dark-theme {
+    background: rgba(255, 255, 255, var(--glass-opacity));
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 6px var(--shadow);
+}
+
+/* Forms */
+input.dark-theme,
+textarea.dark-theme,
+select.dark-theme {
+    background-color: var(--surface);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+}
+
+input.dark-theme:focus,
+textarea.dark-theme:focus,
+select.dark-theme:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(0, 102, 255, 0.2);
+}
+
+/* Links */
+a.dark-theme {
+    color: var(--primary);
+}
+
+a.dark-theme:hover {
+    color: var(--accent);
+}
+
+/* Headers */
+h1.dark-theme,
+h2.dark-theme,
+h3.dark-theme,
+h4.dark-theme,
+h5.dark-theme,
+h6.dark-theme {
+    color: var(--text-primary);
+}
+
+/* Text */
+p.dark-theme,
+span.dark-theme {
+    color: var(--text-secondary);
+}
+
+/* Footer */
+.footer.dark-theme {
+    background-color: var(--background);
+    color: var(--text-secondary);
+}
+
+/* Success Stories */
+.story-card.dark-theme {
+    background: rgba(255, 255, 255, var(--glass-opacity));
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 6px var(--shadow);
+}
+
+/* Blog */
+.blog-post.dark-theme {
+    background: rgba(255, 255, 255, var(--glass-opacity));
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 6px var(--shadow);
+}
+
+/* Partners */
+.partner-card.dark-theme {
+    background: rgba(255, 255, 255, var(--glass-opacity));
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 6px var(--shadow);
+}
+
+/* Careers */
+.position-card.dark-theme {
+    background: rgba(255, 255, 255, var(--glass-opacity));
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 6px var(--shadow);
+}
+
+/* FAQ */
+.faq-item.dark-theme {
+    background: rgba(255, 255, 255, var(--glass-opacity));
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 6px var(--shadow);
+}
+
+/* Consultation Form */
+.consultation-form.dark-theme {
+    background: rgba(255, 255, 255, var(--glass-opacity));
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 6px var(--shadow);
+}
+
+/* Hero Section */
+.hero-section.dark-theme {
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.1), rgba(255, 102, 0, 0.1));
+}

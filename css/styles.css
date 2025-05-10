@@ -189,14 +189,192 @@ button, .btn {
 
 /* Navbar */
 .navbar {
-  padding: 0.75rem 0;
+  background: white;
+  box-shadow: var(--shadow-sm);
+  padding: 1rem 2rem;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  background: var(--white);
-  box-shadow: var(--shadow-md);
+  transition: background-color 0.3s ease;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  transition: color 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  color: var(--primary);
+}
+
+.theme-toggle-btn i {
+  font-size: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle-btn:hover i {
+  transform: scale(1.1);
+}
+
+/* Dark Theme Navbar */
+.navbar.dark-theme {
+  background: #1a1a1a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-link.dark-theme {
+  color: #e0e0e0;
+}
+
+.navbar-link.dark-theme:hover {
+  color: var(--primary);
+}
+
+/* Dark Theme Variables */
+body.dark-theme {
+  --primary-text: #e0e0e0;
+  --secondary-text: #b3b3b3;
+  --background: #1a1a1a;
+  --surface: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.1);
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  --card-backdrop: blur(10px);
+}
+
+/* Dark Theme Body */
+body.dark-theme {
+  background-color: var(--background);
+  color: var(--primary-text);
+}
+
+/* Dark Theme Links */
+a.dark-theme {
+  color: var(--primary);
+}
+
+a.dark-theme:hover {
+  color: var(--accent-1);
+}
+
+/* Dark Theme Cards */
+.glass-card.dark-theme {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--card-shadow);
+  backdrop-filter: var(--card-backdrop);
+}
+
+/* Dark Theme Text */
+p.dark-theme,
+span.dark-theme {
+  color: var(--primary-text);
+}
+
+/* Dark Theme Navbar */
+.navbar.dark-theme {
+  background: var(--background);
+  box-shadow: var(--shadow);
+}
+
+.navbar-link.dark-theme {
+  color: var(--primary-text);
+}
+
+.navbar-link.dark-theme:hover {
+  color: var(--primary);
+}
+
+/* Dark Theme Buttons */
+.btn.dark-theme {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--primary-text);
+}
+
+.btn.dark-theme:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Dark Theme Sections */
+.section.dark-theme {
+  background: var(--background);
+}
+
+/* Dark Theme Headers */
+h1.dark-theme,
+h2.dark-theme,
+h3.dark-theme,
+h4.dark-theme,
+h5.dark-theme,
+h6.dark-theme {
+  color: var(--primary-text);
+}
+
+/* Dark Theme Form Elements */
+input.dark-theme,
+select.dark-theme,
+textarea.dark-theme {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--primary-text);
+}
+
+/* Dark Theme Form Labels */
+label.dark-theme {
+  color: var(--secondary-text);
+}
+
+/* Dark Theme Icons */
+.icon.dark-theme {
+  color: var(--primary-text);
+}
+
+/* Dark Theme Tables */
+table.dark-theme {
+  border: 1px solid var(--border);
+}
+
+table.dark-theme th {
+  background: var(--surface);
+  border-bottom: 2px solid var(--border);
+}
+
+table.dark-theme td {
+  border-bottom: 1px solid var(--border);
+}
+
+/* Dark Theme Lists */
+ul.dark-theme,
+ol.dark-theme {
+  color: var(--primary-text);
+}
+
+/* Dark Theme Footnotes */
+.footnote.dark-theme {
+  color: var(--secondary-text);
+}
+
+/* Dark Theme Scrollbar */
+::-webkit-scrollbar-track.dark-theme {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb.dark-theme {
+  background: var(--border);
+}
+
+::-webkit-scrollbar-thumb.dark-theme:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .navbar-container {

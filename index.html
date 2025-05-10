@@ -290,10 +290,10 @@
       </div>
       
       <div class="integrations-grid">
-        <div class="integration-category">
+        <div class="integration-category" style="text-align: center;">
           <h3 class="category-title">Software Development</h3>
           <div class="integration-cards">
-            <div class="integration-card glass-card">
+            <div class="integration-card glass-card" style="margin: 0 auto;">
               <div class="integration-icon">
                 <i class="fas fa-code"></i>
               </div>
@@ -303,10 +303,10 @@
           </div>
         </div>
 
-        <div class="integration-category">
+        <div class="integration-category" style="text-align: center;">
           <h3 class="category-title">Technology Transfer</h3>
           <div class="integration-cards">
-            <div class="integration-card glass-card">
+            <div class="integration-card glass-card" style="margin: 0 auto;">
               <div class="integration-icon">
                 <i class="fas fa-exchange-alt"></i>
               </div>
@@ -316,10 +316,10 @@
           </div>
         </div>
 
-        <div class="integration-category">
+        <div class="integration-category" style="text-align: center;">
           <h3 class="category-title">Consultation</h3>
           <div class="integration-cards">
-            <div class="integration-card glass-card">
+            <div class="integration-card glass-card" style="margin: 0 auto;">
               <div class="integration-icon">
                 <i class="fas fa-lightbulb"></i>
               </div>
@@ -328,11 +328,72 @@
             </div>
           </div>
         </div>
-
-
       </div>
 
+      <style>
+        .integrations-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 2rem;
+          padding: 2rem 0;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
 
+        .integration-category {
+          text-align: center;
+        }
+
+        .integration-category h3 {
+          margin-bottom: 1.5rem;
+          font-size: 1.5rem;
+          color: var(--primary-color);
+        }
+
+        .integration-card {
+          max-width: 300px;
+          margin: 0 auto;
+          padding: 1.5rem;
+          border-radius: 10px;
+          background: rgba(255, 255, 255, 0.1);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          transition: transform 0.3s ease;
+        }
+
+        .integration-card:hover {
+          transform: translateY(-5px);
+        }
+
+        .integration-icon {
+          font-size: 2.5rem;
+          margin-bottom: 1rem;
+          color: var(--primary-color);
+        }
+
+        .integration-name {
+          font-size: 1.25rem;
+          margin-bottom: 0.5rem;
+          color: var(--text-color);
+        }
+
+        .integration-description {
+          color: var(--text-muted);
+          line-height: 1.6;
+        }
+
+        @media (max-width: 992px) {
+          .integrations-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        @media (max-width: 768px) {
+          .integrations-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+      </style>
     </div>
   </section>
   

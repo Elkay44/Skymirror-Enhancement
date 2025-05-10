@@ -401,20 +401,22 @@
   <section class="cta-section">
     <div class="section-container">
       <div class="cta-content">
-        <h2 class="cta-title">Transform Your Enterprise</h2>
-        <p class="cta-subtitle">Join leading organizations in leveraging quantum technologies for exponential business growth and transformation.</p>
-        <div class="cta-stats">
+        <div class="cta-header">
+          <h2 class="cta-title">Transform Your Enterprise</h2>
+          <p class="cta-subtitle">Join leading organizations in leveraging quantum technologies for exponential business growth and transformation.</p>
+        </div>
+        <div class="cta-stats-container">
           <div class="stat-item">
-            <span class="stat-number">100%</span>
-            <span class="stat-label">Quantum Accuracy</span>
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Quantum Accuracy</div>
           </div>
           <div class="stat-item">
-            <span class="stat-number">99.99%</span>
-            <span class="stat-label">System Uptime</span>
+            <div class="stat-number">99.99%</div>
+            <div class="stat-label">System Uptime</div>
           </div>
           <div class="stat-item">
-            <span class="stat-number">500+</span>
-            <span class="stat-label">Enterprise Clients</span>
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Enterprise Clients</div>
           </div>
         </div>
         <div class="cta-buttons">
@@ -424,6 +426,108 @@
       </div>
     </div>
   </section>
+
+  <style>
+    .cta-section {
+      padding: 5rem 0;
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.05), rgba(255, 255, 255, 0.02));
+    }
+
+    .cta-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .cta-header {
+      margin-bottom: 3rem;
+    }
+
+    .cta-title {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary-color);
+    }
+
+    .cta-subtitle {
+      font-size: 1.25rem;
+      color: var(--text-color);
+      max-width: 800px;
+      margin: 0 auto 2rem;
+    }
+
+    .cta-stats-container {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .stat-item {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .stat-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 1rem;
+      color: var(--text-color);
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .btn {
+      padding: 1rem 2rem;
+      border-radius: 5px;
+      font-weight: 500;
+      transition: transform 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+      .cta-title {
+        font-size: 2rem;
+      }
+
+      .cta-subtitle {
+        font-size: 1.1rem;
+      }
+
+      .cta-stats-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .stat-item {
+        margin-bottom: 1.5rem;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+      }
+    }
+  </style>
   
   <!-- Footer -->
   <footer class="footer">

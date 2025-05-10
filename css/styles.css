@@ -2392,12 +2392,39 @@ button, .btn {
   min-width: 200px;
 }
 
-.footer-logo {
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.logo-img {
+  width: 12px;
+  height: 16px;
+  fill: currentColor;
+  flex-shrink: 0;
+  margin-right: 0.25rem;
+}
+
+.logo-text {
   color: white;
   font-size: 1.5rem;
   font-weight: 700;
   display: flex;
   align-items: center;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 0.25rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
 }
 
 .footer-logo span {

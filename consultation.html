@@ -98,82 +98,90 @@
   <!-- Consultation Form -->
   <section class="section bg-light">
     <div class="section-container">
-      <h2 class="section-title">Request a Consultation</h2>
-      <p class="section-subtitle">Fill out the form below to schedule your consultation</p>
+      <div class="consultation-form-section">
+        <div class="consultation-form-wrapper">
+          <div class="consultation-form-header">
+            <h2 class="section-title">Request Consultation</h2>
+            <p class="section-subtitle">Schedule a consultation with our quantum technology experts</p>
+          </div>
 
-      <form id="consultation-form" class="consultation-form">
-        <div class="form-group">
-          <label for="company-name">Company Name</label>
-          <input type="text" id="company-name" name="company-name" required>
+          <form class="consultation-form glass-card" id="consultationForm">
+            <div class="form-grid">
+              <!-- Contact Information -->
+              <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+              </div>
+
+              <!-- Company Information -->
+              <div class="form-group">
+                <label for="company">Company Name</label>
+                <input type="text" id="company" name="company" required>
+              </div>
+
+              <!-- Consultation Type -->
+              <div class="form-group">
+                <label for="consultationType">Consultation Type</label>
+                <select id="consultationType" name="consultationType" required>
+                  <option value="">Select type</option>
+                  <optgroup label="Software Development">
+                    <option value="software">Software Development</option>
+                    <option value="algorithms">Algorithm Development</option>
+                    <option value="apps">Application Development</option>
+                  </optgroup>
+                  <optgroup label="Technology Transfer">
+                    <option value="implementation">Technology Implementation</option>
+                    <option value="integration">System Integration</option>
+                    <option value="migration">Migration Services</option>
+                  </optgroup>
+                  <optgroup label="Consultation Services">
+                    <option value="strategy">Strategy Consulting</option>
+                    <option value="architecture">Architecture Design</option>
+                    <option value="security">Security Assessment</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <!-- Project Details -->
+              <div class="form-group">
+                <label for="project">Project Description</label>
+                <textarea id="project" name="project" rows="4" placeholder="Please describe your project and your specific requirements for quantum technologies."></textarea>
+              </div>
+
+              <!-- GDPR Consent -->
+              <div class="form-group consent">
+                <div class="checkbox-item">
+                  <input type="checkbox" id="consent" name="consent" required>
+                  <label for="consent">I agree to Skymirror's <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-of-service.html">Terms of Service</a></label>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary submit-btn">
+                <span class="btn-text">Schedule Consultation</span>
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </form>
+
+          <!-- Form Success Message -->
+          <div class="form-success-message hidden">
+            <i class="fas fa-check-circle"></i>
+            <h3>Thank you for your interest!</h3>
+            <p>We'll be in touch within 24 hours to schedule your consultation.</p>
+            <a href="#" class="btn btn-secondary">Back to Top</a>
+          </div>
         </div>
-
-        <div class="form-group">
-          <label for="contact-name">Contact Name</label>
-          <input type="text" id="contact-name" name="contact-name" required>
-        </div>
-
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-
-        <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone">
-        </div>
-
-        <div class="form-group">
-          <label for="company-size">Company Size</label>
-          <select id="company-size" name="company-size" required>
-            <option value="">Select size</option>
-            <option value="small">1-50 employees</option>
-            <option value="medium">51-200 employees</option>
-            <option value="large">201-1000 employees</option>
-            <option value="enterprise">1000+ employees</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="industry">Industry</label>
-          <select id="industry" name="industry" required>
-            <option value="">Select industry</option>
-            <option value="financial">Financial Services</option>
-            <option value="healthcare">Healthcare</option>
-            <option value="manufacturing">Manufacturing</option>
-            <option value="public-sector">Public Sector</option>
-            <option value="retail">Retail</option>
-            <option value="transportation">Transportation</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="consultation-type">Consultation Type</label>
-          <select id="consultation-type" name="consultation-type" required>
-            <option value="">Select type</option>
-            <option value="technology">Technology Assessment</option>
-            <option value="architecture">Architecture Design</option>
-            <option value="security">Security Review</option>
-            <option value="compliance">Compliance Strategy</option>
-            <option value="migration">Migration Planning</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="message">Additional Information</label>
-          <textarea id="message" name="message" rows="4"></textarea>
-        </div>
-
-        <div class="form-group">
-          <label class="checkbox-label">
-            <input type="checkbox" id="privacy" name="privacy" required>
-            I agree to SkyMirror's Privacy Policy
-          </label>
-        </div>
-
-        <button type="submit" class="btn-primary">Submit Request</button>
-      </form>
+      </div>
     </div>
   </section>
 

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Learn how CheckMet's facial recognition attendance system works with Anviz FaceDeep 3 integration, from setup to reporting.">
+  <title>How It Works | CheckMet - Facial Recognition Attendance System</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/glassmorphism.css">
+  <link rel="stylesheet" href="css/theme-toggle.css">
+  <link rel="stylesheet" href="css/glassmorphism.css">
+  <link rel="stylesheet" href="css/theme-toggle.css">
+  <link rel="stylesheet" href="css/glassmorphism.css">
+  <link rel="stylesheet" href="css/theme-toggle.css">
+</head>
+
+<body class="light-theme">
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-logo">Check<span>Met</span></a>
+      
+      <div class="navbar-links">
+        <a href="features.html" class="navbar-link">Features</a>
+        <a href="how-it-works.html" class="navbar-link active">How It Works</a>
+        <a href="solutions.html" class="navbar-link">Solutions</a>
+        <a href="security.html" class="navbar-link">Security</a>
+        <a href="pricing.html" class="navbar-link">Pricing</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon dark-icon"></i>
+          <i class="fas fa-sun light-icon"></i>
+        </button>
+        <a href="demo.html" class="btn-demo">Request Demo</a>
+      </div>
+      
+      <button class="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+  
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="page-header-container">
+      <h1 class="page-title">How CheckMet Works</h1>
+      <p class="page-subtitle">A simple, powerful process for attendance management</p>
+    </div>
+  </section>
+  
+  <!-- Process Overview Section -->
+  <section class="section">
+    <div class="section-container">
+      <h2 class="section-title">The CheckMet Process</h2>
+      <p class="section-subtitle">From implementation to insights in three simple steps</p>
+      
+      <div class="process-timeline">
+        <div class="process-step">
+          <div class="process-step-number">1</div>
+          <div class="process-step-content">
+            <h3 class="process-step-title">Seamless Implementation</h3>
+            <p class="process-step-description">Our team helps set up the Anviz FaceDeep 3 hardware at your location and configures the CheckMet software according to your organization's needs.</p>
+            <ul class="process-step-list">
+              <li>Hardware installation and positioning</li>
+              <li>Software configuration and customization</li>
+              <li>Integration with existing systems (HRMS, payroll, etc.)</li>
+              <li>User role setup and permission configuration</li>
+            </ul>
+          </div>
+          <div class="process-step-image">
+            <img src="https://dummyimage.com/600x400/2563eb/fff&text=Implementation" alt="Implementation" class="rounded-image">
+          </div>
+        </div>
+        
+        <div class="process-step">
+          <div class="process-step-number">2</div>
+          <div class="process-step-content">
+            <h3 class="process-step-title">Employee Enrollment</h3>
+            <p class="process-step-description">Employees are enrolled in the system through a simple, secure process that captures and encrypts their biometric data while ensuring proper consent.</p>
+            <ul class="process-step-list">
+              <li>Quick facial scan with privacy consent</li>
+              <li>Secure encryption of biometric templates (not actual images)</li>
+              <li>Employee profile creation with relevant details</li>
+              <li>Optional multi-method enrollment (fingerprint, smart card)</li>
+            </ul>
+          </div>
+          <div class="process-step-image">
+            <img src="https://dummyimage.com/600x400/2563eb/fff&text=Enrollment" alt="Enrollment" class="rounded-image">
+          </div>
+        </div>
+        
+        <div class="process-step">
+          <div class="process-step-number">3</div>
+          <div class="process-step-content">
+            <h3 class="process-step-title">Daily Operation</h3>
+            <p class="process-step-description">The day-to-day use of CheckMet is incredibly simple, requiring zero training for employees and minimal administration for managers.</p>
+            <ul class="process-step-list">
+              <li>Employees simply walk past the device - automatic recognition</li>
+              <li>Real-time attendance logging with timestamps</li>
+              <li>Immediate dashboard updates with employee status</li>
+              <li>Automatic notifications for exceptions (late arrivals, absences)</li>
+            </ul>
+          </div>
+          <div class="process-step-image">
+            <img src="https://dummyimage.com/600x400/2563eb/fff&text=Operation" alt="Daily Operation" class="rounded-image">
+          </div>
+        </div>
+        
+        <div class="process-step">
+          <div class="process-step-number">4</div>
+          <div class="process-step-content">
+            <h3 class="process-step-title">Reporting & Analytics</h3>
+            <p class="process-step-description">Transform attendance data into actionable insights with comprehensive reporting capabilities.</p>
+            <ul class="process-step-list">
+              <li>Custom report generation for various timeframes</li>
+              <li>Attendance trend analysis and pattern detection</li>
+              <li>Automated report scheduling and distribution</li>
+              <li>Data export for payroll processing and compliance</li>
+            </ul>
+          </div>
+          <div class="process-step-image">
+            <img src="https://dummyimage.com/600x400/2563eb/fff&text=Reporting" alt="Reporting & Analytics" class="rounded-image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- User Experiences Section -->
+  <section class="section bg-light">
+    <div class="section-container">
+      <h2 class="section-title">The CheckMet Experience</h2>
+      <p class="section-subtitle">How different users interact with the system</p>
+      
+      <div class="tabs">
+        <div class="tabs-nav">
+          <button class="tab-btn active" data-tab="employee">Employees</button>
+          <button class="tab-btn" data-tab="hr">HR Managers</button>
+          <button class="tab-btn" data-tab="admin">Administrators</button>
+        </div>
+        
+        <div class="tabs-content">
+          <div class="tab-pane active" id="employee">
+            <h3 class="tab-title"><i class="fas fa-user-alt"></i> For Employees</h3>
+            
+            <div class="tab-content">
+              <div class="tab-image">
+                <img src="https://dummyimage.com/600x400/2563eb/fff&text=Employee+Experience" alt="Employee Experience" class="rounded-image">
+              </div>
+              
+              <div class="tab-description">
+                <h4>Effortless Attendance</h4>
+                <p>For employees, CheckMet offers the simplest attendance experience possible:</p>
+                <ol class="numbered-list">
+                  <li><strong>One-Time Enrollment:</strong> A quick facial scan during onboarding with proper privacy consent.</li>
+                  <li><strong>Daily Check-in:</strong> Simply walk past the FaceDeep 3 device - no need to stop, swipe cards, or touch anything.</li>
+                  <li><strong>Self-Service Portal:</strong> Access personal attendance records, request corrections if needed, and view accumulated work hours.</li>
+                  <li><strong>Leave Management:</strong> Submit and track leave requests through the user-friendly web or mobile interface.</li>
+                </ol>
+                <p>No training required, no badges to lose, and no passwords to remember - just show up and get recognized.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="tab-pane" id="hr">
+            <h3 class="tab-title"><i class="fas fa-users-cog"></i> For HR Managers</h3>
+            
+            <div class="tab-content">
+              <div class="tab-image">
+                <img src="https://dummyimage.com/600x400/2563eb/fff&text=HR+Manager+Experience" alt="HR Manager Experience" class="rounded-image">
+              </div>
+              
+              <div class="tab-description">
+                <h4>Streamlined Administration</h4>
+                <p>HR Managers benefit from comprehensive tools that simplify attendance management:</p>
+                <ol class="numbered-list">
+                  <li><strong>Centralized Dashboard:</strong> View real-time attendance status across the organization with filtering by department or location.</li>
+                  <li><strong>Employee Management:</strong> Add, update, or deactivate employee profiles with bulk actions for efficiency.</li>
+                  <li><strong>Attendance Reporting:</strong> Generate custom reports for payroll, compliance, or management review with automated scheduling.</li>
+                  <li><strong>Leave Approval:</strong> Review and process leave requests with automatic balance calculations and conflict checks.</li>
+                  <li><strong>Exception Handling:</strong> Easily identify and address attendance anomalies with automated notifications.</li>
+                </ol>
+                <p>Reduce administrative work by up to 80% while improving accuracy and compliance.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="tab-pane" id="admin">
+            <h3 class="tab-title"><i class="fas fa-user-shield"></i> For Administrators</h3>
+            
+            <div class="tab-content">
+              <div class="tab-image">
+                <img src="https://dummyimage.com/600x400/2563eb/fff&text=Administrator+Experience" alt="Administrator Experience" class="rounded-image">
+              </div>
+              
+              <div class="tab-description">
+                <h4>Complete System Control</h4>
+                <p>System Administrators have full control over the CheckMet platform:</p>
+                <ol class="numbered-list">
+                  <li><strong>Hardware Management:</strong> Configure and monitor FaceDeep 3 devices across multiple locations.</li>
+                  <li><strong>User Role Configuration:</strong> Define custom roles with granular permissions for different user types.</li>
+                  <li><strong>System Settings:</strong> Customize attendance rules, work schedules, location parameters, and more.</li>
+                  <li><strong>Integration Management:</strong> Configure and maintain connections with HR, payroll, and other enterprise systems.</li>
+                  <li><strong>Security Monitoring:</strong> Access detailed logs, manage data protection settings, and ensure compliance.</li>
+                </ol>
+                <p>Enterprise-grade tools for maintaining system performance, security, and reliability.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Technical Integration Section -->
+  <section class="section">
+    <div class="section-container">
+      <h2 class="section-title">Technical Integration</h2>
+      <p class="section-subtitle">How CheckMet connects with your existing systems</p>
+      
+      <div class="integration-diagram">
+        <img src="https://dummyimage.com/1000x500/2563eb/fff&text=Integration+Diagram" alt="Integration Diagram" class="full-width-image">
+      </div>
+      
+      <div class="integration-details">
+        <div class="integration-detail">
+          <div class="integration-icon">
+            <i class="fas fa-microchip"></i>
+          </div>
+          <h3 class="integration-title">Hardware Integration</h3>
+          <p class="integration-description">The Anviz FaceDeep 3 device connects to your network via Ethernet or Wi-Fi, enabling real-time data flow to the CheckMet platform. Multiple devices can be deployed across different locations and managed centrally.</p>
+        </div>
+        
+        <div class="integration-detail">
+          <div class="integration-icon">
+            <i class="fas fa-cloud"></i>
+          </div>
+          <h3 class="integration-title">Cloud Platform</h3>
+          <p class="integration-description">Our secure cloud platform processes and stores attendance data with enterprise-grade encryption. For organizations with specific security requirements, we also offer on-premises deployment options.</p>
+        </div>
+        
+        <div class="integration-detail">
+          <div class="integration-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3 class="integration-title">API Ecosystem</h3>
+          <p class="integration-description">CheckMet's RESTful API allows seamless integration with your existing systems. We provide pre-built connectors for popular HRMS, payroll, and ERP solutions, along with webhook support for custom workflows.</p>
+        </div>
+        
+        <div class="integration-detail">
+          <div class="integration-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h3 class="integration-title">Mobile Access</h3>
+          <p class="integration-description">Web and mobile interfaces provide access to CheckMet functions from any device. Administrators can monitor attendance remotely, while employees can submit leave requests and view their records on the go.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Implementation Timeline -->
+  <section class="section bg-light">
+    <div class="section-container">
+      <h2 class="section-title">Implementation Timeline</h2>
+      <p class="section-subtitle">How quickly you can get started with CheckMet</p>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker">Day 1</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Initial Consultation</h3>
+            <p class="timeline-description">We discuss your requirements, existing systems, and specific needs to create a tailored implementation plan.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-marker">Week 1</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">System Configuration</h3>
+            <p class="timeline-description">We set up your CheckMet account, configure user roles, and prepare for hardware installation.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-marker">Week 2</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Hardware Installation</h3>
+            <p class="timeline-description">Our team installs and configures the Anviz FaceDeep 3 devices at your location(s).</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-marker">Week 2-3</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">System Integration</h3>
+            <p class="timeline-description">We connect CheckMet with your existing HR and payroll systems to ensure seamless data flow.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-marker">Week 3</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Employee Enrollment</h3>
+            <p class="timeline-description">We help enroll your employees in the system with proper consent and privacy procedures.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-marker">Week 4</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Testing & Training</h3>
+            <p class="timeline-description">We conduct system testing and provide training for administrators and HR managers.</p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-marker">Week 4-5</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Go-Live</h3>
+            <p class="timeline-description">CheckMet goes live with ongoing support from our team during the initial adoption period.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="note-box">
+        <div class="note-icon">
+          <i class="fas fa-info-circle"></i>
+        </div>
+        <div class="note-content">
+          <h4>Implementation Note</h4>
+          <p>Timeline may vary based on organization size, complexity, and specific requirements. We offer expedited implementation options for organizations that need to get started quickly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Call to Action Section -->
+  <section class="cta">
+    <div class="section-container">
+      <h2 class="cta-title">Ready to Implement CheckMet?</h2>
+      <p class="cta-text">Transform your attendance management with our simple, powerful solution.</p>
+      <div class="cta-buttons">
+        <a href="demo.html" class="cta-button">Request a Demo</a>
+        <a href="contact.html" class="cta-button secondary">Contact Sales</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div>
+        <a href="index.html" class="footer-logo">CheckMet</a>
+        <p>Advanced facial recognition attendance management system that simplifies employee tracking and enhances workplace efficiency.</p>
+        
+        <div class="footer-social">
+          <a href="#" class="footer-social-link"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="footer-social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="footer-social-link"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      
+      <div>
+        <h3 class="footer-column-title">Product</h3>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="features.html">Features</a></li>
+          <li class="footer-link"><a href="how-it-works.html">How It Works</a></li>
+          <li class="footer-link"><a href="solutions.html">Solutions</a></li>
+          <li class="footer-link"><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="footer-column-title">Resources</h3>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="#">Blog</a></li>
+          <li class="footer-link"><a href="#">Support Center</a></li>
+          <li class="footer-link"><a href="#">Documentation</a></li>
+          <li class="footer-link"><a href="#">API</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="footer-column-title">Company</h3>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="about.html">About Us</a></li>
+          <li class="footer-link"><a href="contact.html">Contact</a></li>
+          <li class="footer-link"><a href="careers.html">Careers</a></li>
+          <li class="footer-link"><a href="partners.html">Partners</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2025 CheckMet. All rights reserved.</p>
+      
+      <div class="footer-legal">
+        <a href="privacy.html" class="footer-legal-link">Privacy Policy</a>
+        <a href="terms.html" class="footer-legal-link">Terms of Service</a>
+        <a href="gdpr.html" class="footer-legal-link">GDPR Compliance</a>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+  <!-- Theme Switcher -->
+  <script src="js/dark-mode-fix.js"></script>
+  <script>
+    // Tab functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const tabButtons = document.querySelectorAll('.tab-btn');
+      
+      tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Remove active class from all buttons and panes
+          document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.classList.remove('active');
+          });
+          document.querySelectorAll('.tab-pane').forEach(pane => {
+            pane.classList.remove('active');
+          });
+          
+          // Add active class to clicked button
+          this.classList.add('active');
+          
+          // Show corresponding tab pane
+          const tabId = this.getAttribute('data-tab');
+          document.getElementById(tabId).classList.add('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

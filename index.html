@@ -1,400 +1,638 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CheckMet AI – Effortless Attendance, Reinvented</title>
-  <link href="https://fonts.googleapis.com/css?family=Inter:400,700|Poppins:600,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', 'Poppins', Arial, sans-serif;
-      background: linear-gradient(120deg, #0f2027 0%, #2c5364 100%);
-      color: #1a1a1a;
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.7rem 5vw 1.2rem 5vw;
-      background: rgba(255,255,255,0.13);
-      backdrop-filter: blur(12px);
-      border-bottom: 1.5px solid rgba(255,255,255,0.12);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .logo {
-      font-family: 'Poppins', Arial, sans-serif;
-      font-weight: 800;
-      font-size: 2rem;
-      letter-spacing: 2px;
-      color: #2563eb;
-      text-shadow: 0 2px 8px #2563eb22;
-    }
-    nav {
-      display: flex;
-      gap: 2.2rem;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.08rem;
-      transition: color 0.2s;
-      position: relative;
-    }
-    nav a::after {
-      content: '';
-      display: block;
-      height: 2px;
-      width: 0;
-      background: linear-gradient(90deg,#2563eb,#00e676);
-      transition: width 0.2s;
-      position: absolute;
-      left: 0; bottom: -4px;
-    }
-    nav a:hover::after {
-      width: 100%;
-    }
-    .cta-main {
-      background: linear-gradient(90deg,#2563eb,#00e676);
-      color: #fff;
-      font-weight: 700;
-      border: none;
-      border-radius: 2rem;
-      padding: 0.9rem 2.2rem;
-      font-size: 1.15rem;
-      cursor: pointer;
-      box-shadow: 0 4px 24px 0 rgba(41,121,255,0.18);
-      transition: background 0.2s, transform 0.2s;
-      border: 1.5px solid rgba(255,255,255,0.18);
-      margin-left: 1.5rem;
-    }
-    .cta-main:hover {
-      background: linear-gradient(90deg,#00e676,#2563eb);
-      transform: translateY(-2px) scale(1.04);
-    }
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 90vh;
-      padding: 4vw 2vw 2vw 2vw;
-      background: linear-gradient(120deg, #2563eb33 0%, #00e67611 100%);
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-bg-anim {
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      z-index: 0;
-      pointer-events: none;
-      opacity: 0.18;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 650px;
-      text-align: center;
-      margin: 0 auto;
-    }
-    .hero-title {
-      font-family: 'Poppins', Arial, sans-serif;
-      font-size: 2.8rem;
-      font-weight: 800;
-      color: #fff;
-      margin: 0 0 1.2rem 0;
-      letter-spacing: -1px;
-      line-height: 1.1;
-      text-shadow: 0 2px 24px #2563eb55;
-    }
-    .hero-subtitle {
-      font-size: 1.35rem;
-      color: #e0f2fe;
-      margin-bottom: 2rem;
-      font-weight: 500;
-      opacity: 0.95;
-    }
-    .hero-cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.1rem;
-      justify-content: center;
-      margin-bottom: 2.7rem;
-    }
-    .hero-visual {
-      margin: 2.5rem auto 1.5rem auto;
-      max-width: 420px;
-      width: 100%;
-      border-radius: 1.2rem;
-      box-shadow: 0 6px 24px rgba(41,121,255,0.15);
-      background: #fff;
-      overflow: hidden;
-      position: relative;
-    }
-    .hero-visual img, .hero-visual video {
-      width: 100%;
-      display: block;
-      border-radius: 1.2rem;
-    }
-    .trusted-row {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      margin: 2.2rem 0 1.2rem 0;
-    }
-    .trusted-label {
-      color: #fff;
-      font-weight: 700;
-      font-size: 1.1rem;
-      opacity: 0.85;
-      margin-right: 0.7rem;
-    }
-    .trusted-row img {
-      max-width: 90px;
-      max-height: 36px;
-      filter: grayscale(1) brightness(1.1);
-      opacity: 0.8;
-      margin: 0 auto;
-      display: block;
-    }
-    .testimonial {
-      background: rgba(255,255,255,0.18);
-      border-radius: 1.2rem;
-      padding: 1.1rem 1.4rem;
-      color: #fff;
-      font-size: 1.13rem;
-      font-style: italic;
-      margin: 1.5rem auto 0 auto;
-      max-width: 540px;
-      box-shadow: 0 2px 14px 0 #2563eb22;
-    }
-    .testimonial-author {
-      font-weight: 700;
-      color: #00e676;
-      font-style: normal;
-      margin-left: 0.5rem;
-    }
-    .benefits-section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2.2rem;
-      margin: 3rem 0 2rem 0;
-    }
-    .benefit-card {
-      background: rgba(255,255,255,0.23);
-      border-radius: 1.5rem;
-      padding: 2rem 1.4rem 1.4rem 1.4rem;
-      min-width: 220px;
-      box-shadow: 0 4px 24px 0 rgba(41,121,255,0.13);
-      text-align: center;
-      border: 2px solid transparent;
-      transition: border 0.2s, transform 0.2s;
-      cursor: pointer;
-    }
-    .benefit-card:hover {
-      border-color: #00e676;
-      transform: translateY(-4px) scale(1.04);
-    }
-    .benefit-icon {
-      font-size: 2.7rem;
-      color: #2563eb;
-      margin-bottom: 0.7rem;
-    }
-    .benefit-title {
-      font-weight: 800;
-      font-size: 1.2rem;
-      color: #2563eb;
-      margin-bottom: 0.4rem;
-    }
-    .benefit-desc {
-      color: #1a1a1a;
-      opacity: 0.88;
-      font-size: 1.01rem;
-    }
-    .product-preview {
-      margin: 3.5rem auto 2.5rem auto;
-      max-width: 540px;
-      width: 100%;
-      background: rgba(255,255,255,0.27);
-      border-radius: 1.5rem;
-      box-shadow: 0 4px 24px 0 rgba(41,121,255,0.10);
-      padding: 2rem 1.2rem;
-      text-align: center;
-      position: relative;
-    }
-    .product-preview svg {
-      width: 90%;
-      max-width: 400px;
-      height: 120px;
-      margin: 0 auto;
-      display: block;
-    }
-    .site-footer {
-      background: linear-gradient(90deg,#2563eb 0%,#00e676 100%);
-      color: #fff;
-      padding: 2.2rem 0 1.2rem 0;
-      text-align: center;
-      margin-top: 3.5rem;
-    }
-    .footer-content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 2.5rem;
-      margin-bottom: 1.3rem;
-    }
-    .footer-logo {
-      font-family: 'Poppins', Arial, sans-serif;
-      font-weight: 800;
-      font-size: 1.4rem;
-      color: #fff;
-      letter-spacing: 2px;
-    }
-    .footer-links {
-      display: flex;
-      gap: 1.7rem;
-    }
-    .footer-links a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      opacity: 0.92;
-      transition: opacity 0.2s;
-    }
-    .footer-links a:hover {
-      opacity: 1;
-      text-decoration: underline;
-    }
-    .footer-social {
-      display: flex;
-      gap: 1.2rem;
-    }
-    .footer-social-icon {
-      font-size: 1.5rem;
-      color: #fff;
-      opacity: 0.85;
-      transition: opacity 0.2s;
-    }
-    .footer-social-icon:hover {
-      opacity: 1;
-    }
-    @media (max-width: 900px) {
-      .benefits-section {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-      }
-      .hero {
-        min-height: 70vh;
-        padding: 2vw 1vw 2vw 1vw;
-      }
-    }
-    @media (max-width: 600px) {
-      .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1.2rem 5vw 1rem 5vw;
-      }
-      nav {
-        gap: 1.1rem;
-      }
-      .hero-title {
-        font-size: 2rem;
-      }
-      .hero-subtitle {
-        font-size: 1rem;
-      }
-      .trusted-row {
-        gap: 1rem;
-        flex-wrap: wrap;
-      }
-      .benefits-section {
-        gap: 1rem;
-      }
-      .benefit-card {
-        width: 95vw;
-        max-width: 350px;
-      }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="CheckMet - Advanced facial recognition attendance management system for modern businesses.">
+  <title>CheckMet - Facial Recognition Attendance System</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/glassmorphism.css">
+  <link rel="stylesheet" href="css/theme-toggle.css">
+  <link rel="stylesheet" href="css/glassmorphism.css">
+  <link rel="stylesheet" href="css/theme-toggle.css">
 </head>
-<body>
-  <div class="navbar">
-    <span class="logo">CheckMet AI</span>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="#features">Features</a>
-      <a href="demo.html">Demo</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
 
-  <section class="hero">
-    <svg class="hero-bg-anim" viewBox="0 0 1440 320"><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#00e676"/></linearGradient></defs><path fill="url(#g1)" fill-opacity=".4" d="M0,160L60,149.3C120,139,240,117,360,122.7C480,128,600,160,720,181.3C840,203,960,213,1080,197.3C1200,181,1320,139,1380,117.3L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
-    <div class="hero-content">
-      <div class="hero-title">Effortless Attendance, Reinvented</div>
-      <div class="hero-subtitle">AI-powered, secure, and lightning-fast. CheckMet AI automates your attendance—so you can focus on what matters most.</div>
-      <div class="hero-cta-row">
-        <a href="demo.html" class="cta-main">Get Started Free</a>
-        <a href="contact.html" class="cta-main" style="background:linear-gradient(90deg,#fff,#2563eb);color:#2563eb;">Request a Demo</a>
+<body class="light-theme">
+  <!-- Navigation -->
+  <nav class="navbar glass-nav">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-logo">Check<span>Met</span></a>
+      
+      <div class="navbar-links">
+        <a href="features.html" class="navbar-link">Features</a>
+        <a href="how-it-works.html" class="navbar-link">How It Works</a>
+        <a href="solutions.html" class="navbar-link">Solutions</a>
+        <a href="security.html" class="navbar-link">Security</a>
+        <a href="pricing.html" class="navbar-link">Pricing</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon dark-icon"></i>
+          <i class="fas fa-sun light-icon"></i>
+        </button>
+        <a href="demo.html" class="btn-demo glass-btn">Request Demo</a>
       </div>
-      <div class="hero-visual">
-        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80" alt="AI Attendance Concept" />
+      
+      <button class="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+  
+  <!-- Hero Section -->
+  <section class="hero modern-hero">
+    <div class="hero-background">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title">The Smart Way to <span class="highlight">Track Attendance</span></h1>
+        <p class="hero-subtitle">Advanced facial recognition that eliminates manual check-ins, improves accuracy, and delivers real-time workforce insights</p>
+        
+        <div class="hero-cta">
+          <a href="demo.html" class="btn btn-primary glass-effect">Request Demo</a>
+          <a href="how-it-works.html" class="btn btn-secondary">See How It Works <i class="fas fa-arrow-right"></i></a>
+        </div>
       </div>
-      <div class="trusted-row">
-        <span class="trusted-label">Trusted by:</span>
-        <img src="logo.svg" alt="CheckMet logo" style="height:44px;filter:drop-shadow(0 2px 8px #2563eb22);"/>
-        <img src="logo.svg" alt="CheckMet logo" style="height:44px;filter:grayscale(1) brightness(1.1);opacity:0.85;"/>
-        <img src="logo.svg" alt="CheckMet logo" style="height:44px;opacity:0.7;"/>
-        <img src="logo.svg" alt="CheckMet logo" style="height:44px;opacity:0.6;"/>
+      
+      <div class="hero-image-container">
+        <img src="https://dummyimage.com/600x500/f8fafc/2563eb&text=CheckMet+Interface" alt="CheckMet Interface" class="hero-image glass-card">
       </div>
-      <blockquote class="testimonial">
-        “CheckMet AI is a game-changer—setup was a breeze and accuracy is unmatched.”<br><span class="testimonial-author">– Jane Doe, HR Director</span>
-      </blockquote>
+    </div>
+    
+    <div class="hero-features glass-cards-container">
+      <div class="hero-feature glass-card">
+        <div class="hero-feature-icon">
+          <i class="fas fa-bolt"></i>
+        </div>
+        <h3 class="hero-feature-title">Lightning Fast</h3>
+        <p class="hero-feature-text">Check-in in less than 0.5 seconds with just a glance</p>
+      </div>
+      
+      <div class="hero-feature glass-card">
+        <div class="hero-feature-icon">
+          <i class="fas fa-bullseye"></i>
+        </div>
+        <h3 class="hero-feature-title">99.9% Accurate</h3>
+        <p class="hero-feature-text">Eliminate buddy punching and time theft forever</p>
+      </div>
+      
+      <div class="hero-feature glass-card">
+        <div class="hero-feature-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3 class="hero-feature-title">Bank-Level Security</h3>
+        <p class="hero-feature-text">GDPR-compliant with military-grade encryption</p>
+      </div>
+      
+      <div class="hero-feature glass-card">
+        <div class="hero-feature-icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h3 class="hero-feature-title">Real-Time Insights</h3>
+        <p class="hero-feature-text">Actionable analytics and attendance reporting</p>
+      </div>
     </div>
   </section>
-
-  <section id="features" class="benefits-section">
-    <div class="benefit-card">
-      <span class="benefit-icon" aria-label="Lightning Fast">⚡</span>
-      <div class="benefit-title">Lightning Fast</div>
-      <div class="benefit-desc">Check-ins in under 1 second. No waiting, ever.</div>
-    </div>
-    <div class="benefit-card">
-      <span class="benefit-icon" aria-label="Unrivaled Security">🔒</span>
-      <div class="benefit-title">Unrivaled Security</div>
-      <div class="benefit-desc">GDPR-compliant, encrypted, and privacy-first.</div>
-    </div>
-    <div class="benefit-card">
-      <span class="benefit-icon" aria-label="Device Flexibility">📱</span>
-      <div class="benefit-title">Device Flexibility</div>
-      <div class="benefit-desc">Works on any device—mobile, tablet, or desktop.</div>
+  
+  <!-- How It Works Section -->
+  <section class="section">
+    <div class="section-container">
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-subtitle">CheckMet transforms attendance tracking into a seamless, accurate process</p>
+      
+      <div class="steps">
+        <div class="step">
+          <h3 class="step-title">Seamless Setup</h3>
+          <p class="step-description">Quickly enroll employees with a simple facial scan using our Anviz FaceDeep 3 device. The system securely captures and encrypts biometric templates.</p>
+        </div>
+        
+        <div class="step">
+          <h3 class="step-title">Effortless Check-In</h3>
+          <p class="step-description">Employees simply walk past the device - no contact required. The system recognizes their face in under 0.5 seconds and logs attendance automatically.</p>
+        </div>
+        
+        <div class="step">
+          <h3 class="step-title">Instant Insights</h3>
+          <p class="step-description">Access real-time attendance data through our intuitive dashboard. View present/absent status, generate reports, and integrate with your existing HR systems.</p>
+        </div>
+      </div>
     </div>
   </section>
-
-  <section class="product-preview">
-    <h2 style="font-family:'Poppins',Arial,sans-serif;font-size:1.4rem;color:#2563eb;font-weight:700;margin-bottom:1.2rem;">See CheckMet AI in Action</h2>
-    <svg viewBox="0 0 400 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="20" y="20" width="360" height="80" rx="18" fill="#2563eb11" stroke="#2563eb" stroke-width="2"/>
-      <rect x="40" y="40" width="60" height="40" rx="8" fill="#00e676"/>
-      <rect x="120" y="50" width="100" height="20" rx="6" fill="#2563eb"/>
-      <rect x="240" y="55" width="90" height="10" rx="5" fill="#2563eb" fill-opacity="0.5"/>
-      <rect x="340" y="60" width="20" height="10" rx="5" fill="#00e676" fill-opacity="0.7"/>
-    </svg>
-    <div style="color:#64748b;font-size:1rem;margin-top:1rem;">AI-powered attendance dashboard: live, simple, beautiful.</div>
+  
+  <!-- Benefits by Role Section -->
+  <section class="section light-section">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <span class="section-tag">Tailored For All Roles</span>
+        <h2 class="section-title">Benefits for <span class="highlight">Every Stakeholder</span></h2>
+        <p class="section-subtitle">CheckMet delivers value across your entire organization</p>
+      </div>
+      
+      <div class="benefits-grid">
+        <div class="benefit-card glass-card">
+          <div class="benefit-card-icon">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <h3 class="benefit-card-title">HR Managers</h3>
+          <ul class="benefit-list">
+            <li><i class="fas fa-check check-icon"></i> Automate attendance tracking</li>
+            <li><i class="fas fa-check check-icon"></i> Generate one-click timesheet reports</li>
+            <li><i class="fas fa-check check-icon"></i> Seamless payroll integration</li>
+            <li><i class="fas fa-check check-icon"></i> Real-time attendance visibility</li>
+            <li><i class="fas fa-check check-icon"></i> Labor regulation compliance</li>
+          </ul>
+          <a href="features.html#hr-features" class="benefit-link">Learn more <i class="fas fa-arrow-right"></i></a>
+        </div>
+        
+        <div class="benefit-card glass-card featured-card">
+          <div class="benefit-card-icon">
+            <i class="fas fa-user-cog"></i>
+          </div>
+          <h3 class="benefit-card-title">Administrators</h3>
+          <ul class="benefit-list">
+            <li><i class="fas fa-check check-icon"></i> Eliminate time theft completely</li>
+            <li><i class="fas fa-check check-icon"></i> Reduce hardware maintenance costs</li>
+            <li><i class="fas fa-check check-icon"></i> Simple deployment & management</li>
+            <li><i class="fas fa-check check-icon"></i> Scalable for any organization size</li>
+            <li><i class="fas fa-check check-icon"></i> Military-grade security protocols</li>
+          </ul>
+          <a href="features.html#admin-features" class="benefit-link">Learn more <i class="fas fa-arrow-right"></i></a>
+        </div>
+        
+        <div class="benefit-card glass-card">
+          <div class="benefit-card-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3 class="benefit-card-title">Business Owners</h3>
+          <ul class="benefit-list">
+            <li><i class="fas fa-check check-icon"></i> Increase workforce productivity</li>
+            <li><i class="fas fa-check check-icon"></i> Reduce operational expenses</li>
+            <li><i class="fas fa-check check-icon"></i> Gain data-driven workforce insights</li>
+            <li><i class="fas fa-check check-icon"></i> Improve employee accountability</li>
+            <li><i class="fas fa-check check-icon"></i> Fast ROI with proven efficiency</li>
+          </ul>
+          <a href="features.html#business-features" class="benefit-link">Learn more <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
   </section>
-
-  <footer class="site-footer" style="background: linear-gradient(90deg,#2563eb 0%,#00e676 100%); color: #fff; padding: 2.2rem 0 1.2rem 0; text-align: center; margin-top: 3.5rem; box-shadow: 0 -2px 24px 0 rgba(41,121,255,0.12); border-top-left-radius: 2rem; border-top-right-radius: 2rem;">
-  <div style="font-size: 1.1rem; opacity: 0.93;">&copy; 2025 CheckMet. All rights reserved.</div>
-</footer>
+  
+  <!-- Features Section -->
+  <section class="section features-section">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <span class="section-tag">Powerful Capabilities</span>
+        <h2 class="section-title">Advanced <span class="highlight">Features</span></h2>
+        <p class="section-subtitle">Reimagine workforce management with cutting-edge technology</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card glass-card">
+          <div class="feature-icon">
+            <i class="fas fa-face-viewfinder"></i>
+          </div>
+          <h3 class="feature-title">Facial Recognition</h3>
+          <p class="feature-description">Industry-leading AI identifies employees in under 1 second, even with masks or changing appearances.</p>
+          <div class="feature-stats">
+            <div class="feature-stat">
+              <span>99.8%</span>
+              <p>Accuracy</p>
+            </div>
+            <div class="feature-stat">
+              <span>&lt;1s</span>
+              <p>Recognition</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="feature-card glass-card">
+          <div class="feature-icon">
+            <i class="fas fa-shield-check"></i>
+          </div>
+          <h3 class="feature-title">Anti-Spoofing</h3>
+          <p class="feature-description">Multi-layer liveness detection prevents fraud attempts using photos, videos, or masks.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">3D Depth Analysis</span>
+            <span class="tech-tag">Infrared Detection</span>
+          </div>
+        </div>
+        
+        <div class="feature-card glass-card">
+          <div class="feature-icon">
+            <i class="fas fa-mobile-screen"></i>
+          </div>
+          <h3 class="feature-title">Mobile Access</h3>
+          <p class="feature-description">Access real-time attendance data from anywhere with our intuitive mobile applications.</p>
+          <div class="platform-badges">
+            <span><i class="fab fa-apple"></i> iOS</span>
+            <span><i class="fab fa-android"></i> Android</span>
+            <span><i class="fas fa-globe"></i> Web</span>
+          </div>
+        </div>
+        
+        <div class="feature-card glass-card">
+          <div class="feature-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3 class="feature-title">Advanced Analytics</h3>
+          <p class="feature-description">Interactive dashboards provide actionable insights into attendance patterns and productivity.</p>
+          <div class="feature-image">
+            <img src="https://dummyimage.com/300x160/e0e0e0/2563eb" alt="Analytics Dashboard" class="rounded-img">
+          </div>
+        </div>
+        
+        <div class="feature-card glass-card">
+          <div class="feature-icon">
+            <i class="fas fa-plug"></i>
+          </div>
+          <h3 class="feature-title">Seamless Integration</h3>
+          <p class="feature-description">Connect with popular HR, payroll, and access control systems through our secure API.</p>
+          <div class="integration-logos">
+            <img src="https://dummyimage.com/60x30/e0e0e0/666" alt="Integration 1">
+            <img src="https://dummyimage.com/60x30/e0e0e0/666" alt="Integration 2">
+            <img src="https://dummyimage.com/60x30/e0e0e0/666" alt="Integration 3">
+            <img src="https://dummyimage.com/60x30/e0e0e0/666" alt="Integration 4">
+          </div>
+        </div>
+        
+        <div class="feature-card glass-card">
+          <div class="feature-icon">
+            <i class="fas fa-sliders"></i>
+          </div>
+          <h3 class="feature-title">Customizable Workflows</h3>
+          <p class="feature-description">Configure rules, shifts, and approval processes to match your organization's policies.</p>
+          <a href="features.html#workflows" class="feature-link">Learn how it works <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      
+      <div class="text-center mt-6">
+        <a href="features.html" class="btn btn-primary">Explore All Features</a>
+        <a href="demo.html" class="btn btn-secondary">Request Demo <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <span class="section-tag">Questions & Answers</span>
+        <h2 class="section-title">Frequently Asked <span class="highlight">Questions</span></h2>
+        <p class="section-subtitle">Everything you need to know about CheckMet's facial recognition system</p>
+      </div>
+      
+      <div class="faq-container">
+        <div class="faq-col">
+          <div class="faq-card glass-card">
+            <div class="faq-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="faq-content">
+              <h3 class="faq-question">How secure is the facial recognition?</h3>
+              <p class="faq-answer">CheckMet uses enterprise-grade encryption and anti-spoofing AI. All biometric data is encrypted and stored as mathematical templates, not actual images, meeting SOC 2, ISO 27001, and GDPR security standards.</p>
+              <a href="security.html" class="faq-link">Learn about our security <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <div class="faq-card glass-card">
+            <div class="faq-icon">
+              <i class="fas fa-fingerprint"></i>
+            </div>
+            <div class="faq-content">
+              <h3 class="faq-question">Can we use fingerprint or card check-in?</h3>
+              <p class="faq-answer">Absolutely! While facial recognition is our main focus, CheckMet supports multiple identification methods including fingerprint, smart cards, and PIN codes for complete flexibility.</p>
+              <a href="features.html#identification-methods" class="faq-link">View all methods <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="faq-col">
+          <div class="faq-card glass-card">
+            <div class="faq-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="faq-content">
+              <h3 class="faq-question">Is CheckMet GDPR compliant?</h3>
+              <p class="faq-answer">Yes, privacy and compliance are core to our platform. We've built CheckMet with GDPR, CCPA, and other privacy regulations as fundamental requirements, with clear data handling protocols.</p>
+              <a href="gdpr.html" class="faq-link">View compliance details <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <div class="faq-card glass-card">
+            <div class="faq-icon">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <div class="faq-content">
+              <h3 class="faq-question">How do we get started?</h3>
+              <p class="faq-answer">Our implementation process is simple: schedule a demo, receive a custom implementation plan, and our team will guide you through setup, training, and launch in as little as 2 weeks.</p>
+              <a href="demo.html" class="faq-link">Book a demo <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-5">
+        <a href="contact.html#faq" class="btn btn-secondary">View All FAQs <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Testimonial Section -->
+  <section class="testimonials-section">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <span class="section-tag">Success Stories</span>
+        <h2 class="section-title">What Our <span class="highlight">Customers Say</span></h2>
+        <p class="section-subtitle">Join hundreds of organizations already using CheckMet</p>
+      </div>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial-card glass-card">
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"CheckMet transformed our attendance process—fast, secure, and incredibly easy to use. The facial recognition accuracy is outstanding even in challenging lighting conditions."</p>
+          <div class="testimonial-author-container">
+            <div class="testimonial-avatar">
+              <img src="https://dummyimage.com/60x60/e0e0e0/666" alt="Jane Doe">  
+            </div>
+            <div class="testimonial-info">
+              <p class="testimonial-author">Jane Doe</p>
+              <p class="testimonial-role">Principal, FutureTech Academy</p>
+              <div class="company-logo">
+                <img src="https://dummyimage.com/80x30/e0e0e0/666" alt="FutureTech Academy"> 
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card glass-card featured-testimonial">
+          <div class="testimonial-badge">Featured</div>
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Since implementing CheckMet, we've reduced administrative work by 85% and virtually eliminated time theft. The ROI has been remarkable, and the system integrates perfectly with our existing HR software."</p>
+          <div class="testimonial-author-container">
+            <div class="testimonial-avatar">
+              <img src="https://dummyimage.com/60x60/e0e0e0/666" alt="Sarah Johnson">  
+            </div>
+            <div class="testimonial-info">
+              <p class="testimonial-author">Sarah Johnson</p>
+              <p class="testimonial-role">HR Director, GlobalTech Inc.</p>
+              <div class="company-logo">
+                <img src="https://dummyimage.com/80x30/e0e0e0/666" alt="GlobalTech Inc."> 
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card glass-card">
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"The multi-method support is a game changer. Our staff appreciates the flexibility, and the analytics have given us insights we never had before. Customer support has been exceptional too."</p>
+          <div class="testimonial-author-container">
+            <div class="testimonial-avatar">
+              <img src="https://dummyimage.com/60x60/e0e0e0/666" alt="John Smith">  
+            </div>
+            <div class="testimonial-info">
+              <p class="testimonial-author">John Smith</p>
+              <p class="testimonial-role">IT Director, City College</p>
+              <div class="company-logo">
+                <img src="https://dummyimage.com/80x30/e0e0e0/666" alt="City College"> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-5">
+        <a href="#" class="btn btn-secondary">Read More Success Stories <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Integration Partners Section -->
+  <section class="integrations-section light-section">
+    <div class="section-container">
+      <div class="section-header text-center">
+        <span class="section-tag">Ecosystem</span>
+        <h2 class="section-title">Integration <span class="highlight">Partners</span></h2>
+        <p class="section-subtitle">CheckMet connects seamlessly with your existing tech stack</p>
+      </div>
+      
+      <div class="integration-categories">
+        <div class="integration-category active">All</div>
+        <div class="integration-category">HR Systems</div>
+        <div class="integration-category">Payroll</div>
+        <div class="integration-category">Access Control</div>
+        <div class="integration-category">ERP</div>
+      </div>
+      
+      <div class="integrations-grid">
+        <div class="integration-card glass-card">
+          <div class="integration-logo">
+            <img src="https://dummyimage.com/120x60/e0e0e0/2563eb&text=HRSystem" alt="HR System">
+          </div>
+          <div class="integration-details">
+            <h4>HR System Pro</h4>
+            <p>Complete personnel management suite with seamless attendance data sync</p>
+            <div class="integration-type">HR System</div>
+          </div>
+        </div>
+        
+        <div class="integration-card glass-card">
+          <div class="integration-logo">
+            <img src="https://dummyimage.com/120x60/e0e0e0/2563eb&text=PayrollSoft" alt="Payroll Software">
+          </div>
+          <div class="integration-details">
+            <h4>PayrollSoft</h4>
+            <p>Automated payroll processing with accurate attendance-based calculations</p>
+            <div class="integration-type">Payroll</div>
+          </div>
+        </div>
+        
+        <div class="integration-card glass-card">
+          <div class="integration-logo">
+            <img src="https://dummyimage.com/120x60/e0e0e0/2563eb&text=ERPConnect" alt="ERP Connect">
+          </div>
+          <div class="integration-details">
+            <h4>ERP Connect</h4>
+            <p>Enterprise resource planning with integrated attendance management</p>
+            <div class="integration-type">ERP</div>
+          </div>
+        </div>
+        
+        <div class="integration-card glass-card">
+          <div class="integration-logo">
+            <img src="https://dummyimage.com/120x60/e0e0e0/2563eb&text=AccessPro" alt="Access Pro">
+          </div>
+          <div class="integration-details">
+            <h4>Access Pro</h4>
+            <p>Building access control system with unified employee credentials</p>
+            <div class="integration-type">Access Control</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-5">
+        <p class="integration-note">Don't see your system? Our API makes custom integrations simple.</p>
+        <a href="partners.html" class="btn btn-secondary">View All Integrations <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Call to Action Section -->
+  <section class="cta-section">
+    <div class="cta-background">
+      <div class="cta-shape cta-shape-1"></div>
+      <div class="cta-shape cta-shape-2"></div>
+      <div class="cta-shape cta-shape-3"></div>
+    </div>
+    
+    <div class="section-container">
+      <div class="cta-container glass-card">
+        <div class="cta-content">
+          <span class="cta-tag">Get Started</span>
+          <h2 class="cta-title">Transform Your <span class="highlight">Workforce Management</span></h2>
+          <p class="cta-text">Join hundreds of forward-thinking organizations that have revolutionized their attendance processes with CheckMet's facial recognition technology.</p>
+          
+          <div class="cta-stats">
+            <div class="cta-stat">
+              <span class="stat-number">85%</span>
+              <span class="stat-label">Reduction in Administrative Work</span>
+            </div>
+            <div class="cta-stat">
+              <span class="stat-number">99.8%</span>
+              <span class="stat-label">Recognition Accuracy</span>
+            </div>
+            <div class="cta-stat">
+              <span class="stat-number">3.2x</span>
+              <span class="stat-label">ROI Within First Year</span>
+            </div>
+          </div>
+          
+          <div class="cta-buttons">
+            <a href="demo.html" class="btn btn-primary">Request a Demo</a>
+            <a href="contact.html" class="btn btn-secondary">Contact Sales</a>
+          </div>
+        </div>
+        
+        <div class="cta-image">
+          <img src="https://dummyimage.com/500x400/e0e0e0/2563eb" alt="CheckMet Dashboard" class="rounded-img">
+          <div class="cta-image-badge glass-card">
+            <i class="fas fa-shield-check"></i>
+            <span>GDPR Compliant</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div>
+        <a href="index.html" class="footer-logo">CheckMet</a>
+        <p>Advanced facial recognition attendance management system that simplifies employee tracking and enhances workplace efficiency.</p>
+        
+        <div class="footer-social">
+          <a href="#" class="footer-social-link"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="footer-social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="footer-social-link"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      
+      <div>
+        <h3 class="footer-column-title">Product</h3>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="features.html">Features</a></li>
+          <li class="footer-link"><a href="how-it-works.html">How It Works</a></li>
+          <li class="footer-link"><a href="solutions.html">Solutions</a></li>
+          <li class="footer-link"><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="footer-column-title">Resources</h3>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="#">Blog</a></li>
+          <li class="footer-link"><a href="#">Support Center</a></li>
+          <li class="footer-link"><a href="#">Documentation</a></li>
+          <li class="footer-link"><a href="#">API</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="footer-column-title">Company</h3>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="about.html">About Us</a></li>
+          <li class="footer-link"><a href="contact.html">Contact</a></li>
+          <li class="footer-link"><a href="careers.html">Careers</a></li>
+          <li class="footer-link"><a href="partners.html">Partners</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2025 CheckMet. All rights reserved.</p>
+      
+      <div class="footer-legal">
+        <a href="privacy.html" class="footer-legal-link">Privacy Policy</a>
+        <a href="terms.html" class="footer-legal-link">Terms of Service</a>
+        <a href="gdpr.html" class="footer-legal-link">GDPR Compliance</a>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- JavaScript -->
+  <script>
+    // Mobile menu toggle
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+      document.querySelector('.navbar-links').classList.toggle('active');
+    });
+    
+    // Simple scroll reveal animation
+    window.addEventListener('scroll', function() {
+      const elements = document.querySelectorAll('.section, .feature-card, .step, .hero-feature');
+      
+      elements.forEach(function(element) {
+        const position = element.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.2;
+        
+        if(position < screenPosition) {
+          element.classList.add('fade-in');
+        }
+      });
+    });
+  </script>
+  <!-- Main JS -->
+  <script src="js/main.js"></script>
+  <!-- Theme Switcher -->
+  <script src="js/dark-mode-fix.js"></script>
 </body>
 </html>

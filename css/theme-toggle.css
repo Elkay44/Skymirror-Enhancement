@@ -1,0 +1,72 @@
+/* Theme Toggle Styles */
+.theme-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+  position: relative;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(37, 99, 235, 0.1);
+}
+
+.theme-toggle .dark-icon,
+.theme-toggle .light-icon {
+  position: absolute;
+  font-size: 1.2rem;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Show/hide icons based on theme */
+.light-theme .theme-toggle .light-icon {
+  opacity: 0;
+  transform: rotate(90deg) scale(0);
+}
+
+.light-theme .theme-toggle .dark-icon {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+.dark-theme .theme-toggle .dark-icon {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0);
+}
+
+.dark-theme .theme-toggle .light-icon {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+  color: #fbbf24; /* Amber color for sun icon in dark mode */
+}
+
+/* Dark theme specific navigation adjustments */
+.dark-theme .navbar-logo,
+.dark-theme .navbar-link,
+.dark-theme .btn-demo {
+  color: var(--text-color) !important;
+}
+
+.dark-theme .navbar-logo span {
+  color: var(--primary-light) !important;
+}
+
+.dark-theme .btn-demo {
+  border-color: var(--primary-light);
+}
+
+.dark-theme .btn-demo:hover {
+  background-color: var(--primary-light);
+}
+
+.dark-theme .mobile-menu-toggle {
+  color: var(--text-color);
+}

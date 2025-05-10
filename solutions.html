@@ -1,52 +1,465 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Solutions | Checkmet AI</title>
-  <img src="logo.svg" alt="CheckMet logo" style="height:44px;filter:drop-shadow(0 2px 8px #2563eb22);"/>
-  <link href="https://fonts.googleapis.com/css?family=Inter:400,600,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Discover how CheckMet's facial recognition attendance system solves attendance challenges across various industries including corporate, education, manufacturing, and healthcare.">
+  <title>Solutions | CheckMet - Facial Recognition Attendance System</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/glassmorphism.css">
+  <link rel="stylesheet" href="css/theme-toggle.css">
+  <link rel="stylesheet" href="css/glassmorphism.css">
+  <link rel="stylesheet" href="css/theme-toggle.css">
+  <link rel="stylesheet" href="css/glassmorphism.css">
+  <link rel="stylesheet" href="css/theme-toggle.css">
 </head>
-<body>
-  <!-- Sticky Navigation Bar -->
-  <div class="navbar sticky-navbar">
-    <span class="logo">CheckMet AI</span>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="features.html">Features</a>
-      <a href="demo.html">Demo</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-  <div class="navbar">
-    <span class="logo">CheckMet AI</span>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="features.html">Features</a>
-      <a href="solutions.html">Solutions</a>
-      <a href="integrations.html">Integrations</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="resources.html">Resources</a>
-      <a href="support.html">Support</a>
-      <a href="contact.html">Contact</a>
-      <a href="demo.html" class="cta-btn">Request a Demo</a>
-    </nav>
-  </div>
-  <section class="solutions-section glassy">
-    <h1>Solutions</h1>
-    <div class="solutions-gallery">
-      <div class="solution-item" style="background-image:url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80')">
-        <span class="solution-caption">Enterprise<br><small>Scale Efficiently</small></span>
+
+<body class="light-theme">
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-logo">Check<span>Met</span></a>
+      
+      <div class="navbar-links">
+        <a href="features.html" class="navbar-link">Features</a>
+        <a href="how-it-works.html" class="navbar-link">How It Works</a>
+        <a href="solutions.html" class="navbar-link active">Solutions</a>
+        <a href="security.html" class="navbar-link">Security</a>
+        <a href="pricing.html" class="navbar-link">Pricing</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon dark-icon"></i>
+          <i class="fas fa-sun light-icon"></i>
+        </button>
+        <a href="demo.html" class="btn-demo">Request Demo</a>
       </div>
-      <div class="solution-item" style="background-image:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80')">
-        <span class="solution-caption">Healthcare<br><small>Stay Compliant</small></span>
-      </div>
-      <div class="solution-item" style="background-image:url('https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80')">
-        <span class="solution-caption">Education<br><small>Engage Easily</small></span>
+      
+      <button class="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+  
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="page-header-container">
+      <h1 class="page-title">Industry Solutions</h1>
+      <p class="page-subtitle">Tailored attendance management for every organization</p>
+    </div>
+  </section>
+  
+  <!-- Industry Solutions Section -->
+  <section class="section">
+    <div class="section-container">
+      <h2 class="section-title">Industry-Specific Solutions</h2>
+      <p class="section-subtitle">How CheckMet solves unique attendance challenges across different sectors</p>
+      
+      <div class="solutions-grid">
+        <!-- Corporate Office Solution -->
+        <div class="solution-card">
+          <div class="solution-image">
+            <img src="https://dummyimage.com/600x400/2563eb/fff&text=Corporate+Offices" alt="Corporate Office Solution" class="rounded-image">
+          </div>
+          <div class="solution-content">
+            <div class="solution-icon">
+              <i class="fas fa-building"></i>
+            </div>
+            <h3 class="solution-title">Corporate Offices</h3>
+            <div class="solution-challenge">
+              <h4><i class="fas fa-exclamation-circle"></i> Challenge</h4>
+              <p>Managing flexible work schedules, remote work policies, and ensuring accurate time tracking for a modern workforce.</p>
+            </div>
+            <div class="solution-benefits">
+              <h4><i class="fas fa-check-circle"></i> Solution</h4>
+              <ul class="solution-list">
+                <li>Flexible attendance policies that accommodate hybrid work models</li>
+                <li>Multi-location support with centralized reporting</li>
+                <li>Integration with office access control systems</li>
+                <li>Detailed analytics for workspace utilization</li>
+                <li>Support for multiple check-in/out points throughout facilities</li>
+              </ul>
+            </div>
+            <div class="solution-outcome">
+              <h4><i class="fas fa-chart-line"></i> Outcome</h4>
+              <p>30% reduction in HR administrative time, improved employee satisfaction, and accurate data for payroll processing and compliance reporting.</p>
+            </div>
+            <div class="solution-cta">
+              <a href="demo.html" class="btn btn-primary">See Corporate Demo</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Education Solution -->
+        <div class="solution-card">
+          <div class="solution-image">
+            <img src="https://dummyimage.com/600x400/2563eb/fff&text=Education" alt="Education Solution" class="rounded-image">
+          </div>
+          <div class="solution-content">
+            <div class="solution-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3 class="solution-title">Education</h3>
+            <div class="solution-challenge">
+              <h4><i class="fas fa-exclamation-circle"></i> Challenge</h4>
+              <p>Managing faculty and student attendance across multiple buildings, tracking classroom attendance, and allocating substitute teachers efficiently.</p>
+            </div>
+            <div class="solution-benefits">
+              <h4><i class="fas fa-check-circle"></i> Solution</h4>
+              <ul class="solution-list">
+                <li>Distributed device network with centralized management</li>
+                <li>Classroom attendance tracking for students</li>
+                <li>Faculty check-in with course assignment tracking</li>
+                <li>Integration with Student Information Systems (SIS)</li>
+                <li>Automated substitute teacher allocation alerts</li>
+              </ul>
+            </div>
+            <div class="solution-outcome">
+              <h4><i class="fas fa-chart-line"></i> Outcome</h4>
+              <p>Streamlined substitute teacher allocation, improved resource planning, and enhanced student attendance monitoring with automated parent notifications.</p>
+            </div>
+            <div class="solution-cta">
+              <a href="demo.html" class="btn btn-primary">See Education Demo</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Manufacturing Solution -->
+        <div class="solution-card">
+          <div class="solution-image">
+            <img src="https://dummyimage.com/600x400/2563eb/fff&text=Manufacturing" alt="Manufacturing Solution" class="rounded-image">
+          </div>
+          <div class="solution-content">
+            <div class="solution-icon">
+              <i class="fas fa-industry"></i>
+            </div>
+            <h3 class="solution-title">Manufacturing</h3>
+            <div class="solution-challenge">
+              <h4><i class="fas fa-exclamation-circle"></i> Challenge</h4>
+              <p>Managing high volume of employees arriving at shift changes, preventing buddy punching, and ensuring accurate time tracking in challenging environments.</p>
+            </div>
+            <div class="solution-benefits">
+              <h4><i class="fas fa-check-circle"></i> Solution</h4>
+              <ul class="solution-list">
+                <li>Multiple FaceDeep 3 devices with high-speed processing</li>
+                <li>Shift management with automatic overtime calculation</li>
+                <li>Ruggedized hardware options for industrial environments</li>
+                <li>Integration with production planning systems</li>
+                <li>Time and attendance data for labor cost analysis</li>
+              </ul>
+            </div>
+            <div class="solution-outcome">
+              <h4><i class="fas fa-chart-line"></i> Outcome</h4>
+              <p>Eliminated time card fraud, reduced clock-in bottlenecks by 90%, and improved shift change efficiency with accurate labor cost tracking.</p>
+            </div>
+            <div class="solution-cta">
+              <a href="demo.html" class="btn btn-primary">See Manufacturing Demo</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Healthcare Solution -->
+        <div class="solution-card">
+          <div class="solution-image">
+            <img src="https://dummyimage.com/600x400/2563eb/fff&text=Healthcare" alt="Healthcare Solution" class="rounded-image">
+          </div>
+          <div class="solution-content">
+            <div class="solution-icon">
+              <i class="fas fa-hospital"></i>
+            </div>
+            <h3 class="solution-title">Healthcare</h3>
+            <div class="solution-challenge">
+              <h4><i class="fas fa-exclamation-circle"></i> Challenge</h4>
+              <p>Managing complex shift patterns, ensuring adequate staffing levels, and maintaining strict compliance with healthcare regulations.</p>
+            </div>
+            <div class="solution-benefits">
+              <h4><i class="fas fa-check-circle"></i> Solution</h4>
+              <ul class="solution-list">
+                <li>Touchless check-in for hygienic operation</li>
+                <li>Complex shift pattern support with compliance tracking</li>
+                <li>Department-specific staffing level monitoring</li>
+                <li>Integration with healthcare staff scheduling systems</li>
+                <li>Detailed audit trails for regulatory compliance</li>
+              </ul>
+            </div>
+            <div class="solution-outcome">
+              <h4><i class="fas fa-chart-line"></i> Outcome</h4>
+              <p>Simplified compliance reporting, improved staff allocation, reduced administrative overhead, and better management of department staffing requirements.</p>
+            </div>
+            <div class="solution-cta">
+              <a href="demo.html" class="btn btn-primary">See Healthcare Demo</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+  
+  <!-- Use Case Solutions Section -->
+  <section class="section bg-light">
+    <div class="section-container">
+      <h2 class="section-title">Specialized Use Cases</h2>
+      <p class="section-subtitle">Tailored solutions for specific attendance management challenges</p>
+      
+      <div class="use-cases-grid">
+        <div class="use-case-card">
+          <div class="use-case-icon">
+            <i class="fas fa-laptop-house"></i>
+          </div>
+          <h3 class="use-case-title">Remote/Hybrid Workforce</h3>
+          <p class="use-case-description">Manage attendance for employees working from various locations with flexible scheduling.</p>
+          <ul class="use-case-features">
+            <li>Mobile check-in options with geofencing</li>
+            <li>Customizable work-from-home policies</li>
+            <li>Integration with productivity tools</li>
+            <li>Unified reporting across all work locations</li>
+          </ul>
+        </div>
+        
+        <div class="use-case-card">
+          <div class="use-case-icon">
+            <i class="fas fa-clipboard-check"></i>
+          </div>
+          <h3 class="use-case-title">Compliance & Regulation</h3>
+          <p class="use-case-description">Meet industry-specific compliance requirements with detailed record-keeping.</p>
+          <ul class="use-case-features">
+            <li>Automatic working hours calculation</li>
+            <li>Overtime tracking and reporting</li>
+            <li>Labor law compliance features</li>
+            <li>Audit-ready attendance records</li>
+          </ul>
+        </div>
+        
+        <div class="use-case-card">
+          <div class="use-case-icon">
+            <i class="fas fa-money-check-alt"></i>
+          </div>
+          <h3 class="use-case-title">Payroll Accuracy</h3>
+          <p class="use-case-description">Ensure precise payroll processing with accurate attendance data.</p>
+          <ul class="use-case-features">
+            <li>Direct integration with payroll systems</li>
+            <li>Automatic time calculation with custom rules</li>
+            <li>Exception handling for special cases</li>
+            <li>Error reduction in compensation</li>
+          </ul>
+        </div>
+        
+        <div class="use-case-card">
+          <div class="use-case-icon">
+            <i class="fas fa-project-diagram"></i>
+          </div>
+          <h3 class="use-case-title">Multi-Location Management</h3>
+          <p class="use-case-description">Centrally manage attendance across multiple sites or branches.</p>
+          <ul class="use-case-features">
+            <li>Unified dashboard for all locations</li>
+            <li>Location-specific policy configuration</li>
+            <li>Cross-location employee movement tracking</li>
+            <li>Comparative location performance analytics</li>
+          </ul>
+        </div>
+        
+        <div class="use-case-card">
+          <div class="use-case-icon">
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <h3 class="use-case-title">Shift Management</h3>
+          <p class="use-case-description">Optimize complex shift patterns and ensure adequate staffing levels.</p>
+          <ul class="use-case-features">
+            <li>Shift template creation and scheduling</li>
+            <li>Automated alerts for understaffed shifts</li>
+            <li>Shift swapping and approval workflows</li>
+            <li>Historical shift coverage analysis</li>
+          </ul>
+        </div>
+        
+        <div class="use-case-card">
+          <div class="use-case-icon">
+            <i class="fas fa-user-clock"></i>
+          </div>
+          <h3 class="use-case-title">Contractor & Visitor Management</h3>
+          <p class="use-case-description">Track temporary workers, consultants, and visitors with specialized attendance rules.</p>
+          <ul class="use-case-features">
+            <li>Temporary access and attendance tracking</li>
+            <li>Contractor hour verification for billing</li>
+            <li>Visitor check-in and movement logging</li>
+            <li>Separate reporting for different personnel types</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Customer Success Stories -->
+  <section class="section">
+    <div class="section-container">
+      <h2 class="section-title">Success Stories</h2>
+      <p class="section-subtitle">How organizations are transforming attendance management with CheckMet</p>
+      
+      <div class="success-stories">
+        <div class="success-story">
+          <div class="success-story-image">
+            <img src="https://dummyimage.com/400x400/2563eb/fff&text=TechCorp" alt="TechCorp Success Story" class="rounded-image">
+          </div>
+          <div class="success-story-content">
+            <h3 class="success-story-title">TechCorp Streamlines Hybrid Work Model</h3>
+            <p class="success-story-company"><i class="fas fa-building"></i> TechCorp, Technology Sector</p>
+            <p class="success-story-description">TechCorp implemented CheckMet to manage their hybrid work model across 5 global offices with 500+ employees. With facial recognition at office locations and secure mobile check-in for remote workers, they achieved:</p>
+            <div class="success-metrics">
+              <div class="success-metric">
+                <div class="success-metric-value">85%</div>
+                <div class="success-metric-label">Reduction in attendance disputes</div>
+              </div>
+              <div class="success-metric">
+                <div class="success-metric-value">92%</div>
+                <div class="success-metric-label">Employee satisfaction</div>
+              </div>
+              <div class="success-metric">
+                <div class="success-metric-value">40+</div>
+                <div class="success-metric-label">Hours saved monthly on administration</div>
+              </div>
+            </div>
+            <a href="#" class="btn btn-secondary btn-sm">Read Full Case Study</a>
+          </div>
+        </div>
+        
+        <div class="success-story">
+          <div class="success-story-image">
+            <img src="https://dummyimage.com/400x400/2563eb/fff&text=MetroHealth" alt="MetroHealth Success Story" class="rounded-image">
+          </div>
+          <div class="success-story-content">
+            <h3 class="success-story-title">MetroHealth Ensures Optimal Staffing Levels</h3>
+            <p class="success-story-company"><i class="fas fa-hospital"></i> MetroHealth, Healthcare Sector</p>
+            <p class="success-story-description">MetroHealth, a network of 3 hospitals with 2,000+ staff members, implemented CheckMet to manage complex shift patterns and ensure regulatory compliance. Their results include:</p>
+            <div class="success-metrics">
+              <div class="success-metric">
+                <div class="success-metric-value">98%</div>
+                <div class="success-metric-label">Compliance rate</div>
+              </div>
+              <div class="success-metric">
+                <div class="success-metric-value">30%</div>
+                <div class="success-metric-label">Reduction in overtime costs</div>
+              </div>
+              <div class="success-metric">
+                <div class="success-metric-value">15min</div>
+                <div class="success-metric-label">Average time saved per shift changeover</div>
+              </div>
+            </div>
+            <a href="#" class="btn btn-secondary btn-sm">Read Full Case Study</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Partner Program -->
+  <section class="section bg-light">
+    <div class="section-container">
+      <h2 class="section-title">Implementation Partners</h2>
+      <p class="section-subtitle">Expert assistance for your CheckMet deployment</p>
+      
+      <div class="partners-container">
+        <p class="partners-description">CheckMet works with a network of certified implementation partners who can provide local support, custom integration services, and industry-specific expertise. Our partners help ensure a smooth deployment and ongoing success with your attendance management solution.</p>
+        
+        <div class="partners-grid">
+          <div class="partner-logo">
+            <img src="https://dummyimage.com/200x100/2563eb/fff&text=TechSolutions" alt="TechSolutions Partner" class="partner-image">
+          </div>
+          <div class="partner-logo">
+            <img src="https://dummyimage.com/200x100/2563eb/fff&text=IntegrateIT" alt="IntegrateIT Partner" class="partner-image">
+          </div>
+          <div class="partner-logo">
+            <img src="https://dummyimage.com/200x100/2563eb/fff&text=SystemsPro" alt="SystemsPro Partner" class="partner-image">
+          </div>
+          <div class="partner-logo">
+            <img src="https://dummyimage.com/200x100/2563eb/fff&text=HRtech" alt="HRtech Partner" class="partner-image">
+          </div>
+        </div>
+        
+        <div class="partner-cta">
+          <a href="partners.html" class="btn btn-primary">Find a Partner</a>
+          <a href="contact.html" class="btn btn-secondary">Become a Partner</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Call to Action Section -->
+  <section class="cta">
+    <div class="section-container">
+      <h2 class="cta-title">Find Your Ideal Solution</h2>
+      <p class="cta-text">Let us help you identify the perfect CheckMet configuration for your organization's specific needs.</p>
+      <a href="demo.html" class="cta-button">Schedule a Consultation</a>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div>
+        <a href="index.html" class="footer-logo">CheckMet</a>
+        <p>Advanced facial recognition attendance management system that simplifies employee tracking and enhances workplace efficiency.</p>
+        
+        <div class="footer-social">
+          <a href="#" class="footer-social-link"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="footer-social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="footer-social-link"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      
+      <div>
+        <h3 class="footer-column-title">Product</h3>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="features.html">Features</a></li>
+          <li class="footer-link"><a href="how-it-works.html">How It Works</a></li>
+          <li class="footer-link"><a href="solutions.html">Solutions</a></li>
+          <li class="footer-link"><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="footer-column-title">Resources</h3>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="#">Blog</a></li>
+          <li class="footer-link"><a href="#">Support Center</a></li>
+          <li class="footer-link"><a href="#">Documentation</a></li>
+          <li class="footer-link"><a href="#">API</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="footer-column-title">Company</h3>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="about.html">About Us</a></li>
+          <li class="footer-link"><a href="contact.html">Contact</a></li>
+          <li class="footer-link"><a href="careers.html">Careers</a></li>
+          <li class="footer-link"><a href="partners.html">Partners</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2025 CheckMet. All rights reserved.</p>
+      
+      <div class="footer-legal">
+        <a href="privacy.html" class="footer-legal-link">Privacy Policy</a>
+        <a href="terms.html" class="footer-legal-link">Terms of Service</a>
+        <a href="gdpr.html" class="footer-legal-link">GDPR Compliance</a>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+  <!-- Theme Switcher -->
+  <script src="js/dark-mode-fix.js"></script>
 </body>
 </html>

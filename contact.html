@@ -1,102 +1,527 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CheckMet AI – Contact</title>
-  <link href="https://fonts.googleapis.com/css?family=Inter:400,700|Poppins:600,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {margin:0;font-family:'Inter','Poppins',Arial,sans-serif;background:linear-gradient(120deg,#0f2027 0%,#2c5364 100%);color:#1a1a1a;min-height:100vh;overflow-x:hidden;}
-    .site-footer {background:linear-gradient(90deg,#2563eb 0%,#00e676 100%);color:#fff;padding:2.2rem 0 1.2rem 0;text-align:center;margin-top:3.5rem;box-shadow:0 -2px 24px 0 rgba(41,121,255,0.12);border-top-left-radius:2rem;border-top-right-radius:2rem;}
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Contact CheckMet for information about our facial recognition attendance system. Reach our sales, support, and partnership teams.">
+  <title>Contact Us | CheckMet - Facial Recognition Attendance System</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/glassmorphism.css">
+  <link rel="stylesheet" href="css/theme-toggle.css">
+  <link rel="stylesheet" href="css/glassmorphism.css">
+  <link rel="stylesheet" href="css/theme-toggle.css">
+  <link rel="stylesheet" href="css/glassmorphism.css">
+  <link rel="stylesheet" href="css/theme-toggle.css">
 </head>
-<body>
-  <div class="navbar">
-    <span class="logo">CheckMet AI</span>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="features.html">Features</a>
-      <a href="demo.html">Demo</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-  <section class="contact-hero">
-    <div class="contact-hero-title">Let’s Connect</div>
-    <div class="contact-hero-subtitle">Questions, partnership inquiries, or just want to say hello? Fill out the form below and our team will get back to you within 24 hours.</div>
-    <div class="contact-hero-visual">
-      <svg viewBox="0 0 340 100" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="20" width="320" height="60" rx="18" fill="#2563eb11" stroke="#2563eb" stroke-width="2"/><rect x="30" y="35" width="50" height="30" rx="8" fill="#00e676"/><rect x="100" y="45" width="80" height="15" rx="6" fill="#2563eb"/><rect x="200" y="50" width="70" height="8" rx="5" fill="#2563eb" fill-opacity="0.5"/><rect x="280" y="55" width="20" height="8" rx="5" fill="#00e676" fill-opacity="0.7"/></svg>
+
+<body class="light-theme">
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-logo">Check<span>Met</span></a>
+      
+      <div class="navbar-links">
+        <a href="features.html" class="navbar-link">Features</a>
+        <a href="how-it-works.html" class="navbar-link">How It Works</a>
+        <a href="solutions.html" class="navbar-link">Solutions</a>
+        <a href="security.html" class="navbar-link">Security</a>
+        <a href="pricing.html" class="navbar-link">Pricing</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon dark-icon"></i>
+          <i class="fas fa-sun light-icon"></i>
+        </button>
+        <a href="demo.html" class="btn-demo">Request Demo</a>
+      </div>
+      
+      <button class="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+  
+  <!-- Page Header -->
+  <section class="page-header contact-header">
+    <div class="page-header-container">
+      <h1 class="page-title">Contact Us</h1>
+      <p class="page-subtitle">Reach out to our team with your questions</p>
     </div>
   </section>
-  <section class="contact-form-section">
-    <form class="contact-form" autocomplete="off">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your Name" />
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@email.com" />
-      <label for="message">Message</label>
-      <textarea id="message" name="message" required placeholder="How can we help?"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+  
+  <!-- Contact Options -->
+  <section class="section">
+    <div class="section-container">
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="section-subtitle">Connect with the right team at CheckMet</p>
+      
+      <div class="contact-options">
+        <div class="contact-option">
+          <div class="contact-option-icon">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h3 class="contact-option-title">Sales Inquiries</h3>
+          <p class="contact-option-description">For pricing, proposals, and product information</p>
+          <div class="contact-option-details">
+            <p><i class="fas fa-envelope"></i> <a href="mailto:sales@checkmet.com">sales@checkmet.com</a></p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+18005551234">+1 (800) 555-1234</a></p>
+            <p><i class="fas fa-clock"></i> Monday-Friday: 9AM-6PM ET</p>
+          </div>
+          <a href="demo.html" class="contact-option-cta">Request a Demo</a>
+        </div>
+        
+        <div class="contact-option">
+          <div class="contact-option-icon">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h3 class="contact-option-title">Technical Support</h3>
+          <p class="contact-option-description">For existing customers needing assistance</p>
+          <div class="contact-option-details">
+            <p><i class="fas fa-envelope"></i> <a href="mailto:support@checkmet.com">support@checkmet.com</a></p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+18005551235">+1 (800) 555-1235</a></p>
+            <p><i class="fas fa-clock"></i> 24/7 Support for Enterprise clients</p>
+            <p><i class="fas fa-clock"></i> Monday-Friday: 8AM-8PM ET for all other plans</p>
+          </div>
+          <a href="https://support.checkmet.com" class="contact-option-cta">Visit Support Portal</a>
+        </div>
+        
+        <div class="contact-option">
+          <div class="contact-option-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3 class="contact-option-title">Partnership Opportunities</h3>
+          <p class="contact-option-description">For businesses interested in partnering with CheckMet</p>
+          <div class="contact-option-details">
+            <p><i class="fas fa-envelope"></i> <a href="mailto:partners@checkmet.com">partners@checkmet.com</a></p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+18005551236">+1 (800) 555-1236</a></p>
+            <p><i class="fas fa-clock"></i> Monday-Friday: 9AM-6PM ET</p>
+          </div>
+          <a href="partners.html" class="contact-option-cta">Learn About Our Partner Program</a>
+        </div>
+        
+        <div class="contact-option">
+          <div class="contact-option-icon">
+            <i class="fas fa-newspaper"></i>
+          </div>
+          <h3 class="contact-option-title">Media Inquiries</h3>
+          <p class="contact-option-description">For press and media requests</p>
+          <div class="contact-option-details">
+            <p><i class="fas fa-envelope"></i> <a href="mailto:press@checkmet.com">press@checkmet.com</a></p>
+            <p><i class="fas fa-clock"></i> Monday-Friday: 9AM-6PM ET</p>
+          </div>
+          <a href="#" class="contact-option-cta">Download Press Kit</a>
+        </div>
+      </div>
+    </div>
   </section>
-  <div class="trusted-row">
-    <span class="trusted-label">Trusted by:</span>
-    <img src="logo.svg" alt="CheckMet logo" style="height:44px;filter:drop-shadow(0 2px 8px #2563eb22);"/>
-    <img src="logo.svg" alt="CheckMet logo" style="height:44px;filter:grayscale(1) brightness(1.1);opacity:0.85;"/>
-    <img src="logo.svg" alt="CheckMet logo" style="height:44px;opacity:0.7;"/>
-    <img src="logo.svg" alt="CheckMet logo" style="height:44px;opacity:0.6;"/>
-  </div>
-  <blockquote class="testimonial">
-    “The support team is fast, friendly, and super helpful. Highly recommended!”<br><span class="testimonial-author">– Michael Lee, CTO</span>
-  </blockquote>
-  <footer class="site-footer">
-    <div style="font-size: 1.1rem; opacity: 0.93;">&copy; 2025 CheckMet. All rights reserved.</div>
+  
+  <!-- Contact Form Section -->
+  <section class="section bg-light">
+    <div class="section-container">
+      <div class="contact-form-section">
+        <div class="contact-form-content">
+          <h2>Send Us a Message</h2>
+          <p>Have questions or need more information? Fill out the form and we'll get back to you as soon as possible.</p>
+          
+          <div class="contact-highlights">
+            <div class="contact-highlight">
+              <div class="contact-highlight-icon">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <div class="contact-highlight-content">
+                <h3>Quick Response</h3>
+                <p>We typically respond to all inquiries within 24 hours during business days.</p>
+              </div>
+            </div>
+            
+            <div class="contact-highlight">
+              <div class="contact-highlight-icon">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <div class="contact-highlight-content">
+                <h3>Expert Assistance</h3>
+                <p>Your message will be routed to the team member best equipped to address your specific needs.</p>
+              </div>
+            </div>
+            
+            <div class="contact-highlight">
+              <div class="contact-highlight-icon">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <div class="contact-highlight-content">
+                <h3>No Obligation</h3>
+                <p>Get the information you need without any pressure or commitment.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="global-presence">
+            <h3>Our Global Presence</h3>
+            <div class="global-locations">
+              <div class="global-location">
+                <p><strong>North America</strong><br>
+                San Francisco (HQ) & New York</p>
+              </div>
+              <div class="global-location">
+                <p><strong>Europe</strong><br>
+                London & Amsterdam</p>
+              </div>
+              <div class="global-location">
+                <p><strong>Asia Pacific</strong><br>
+                Singapore & Sydney</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form-container">
+          <form id="contactForm" class="contact-form">
+            <div class="form-group">
+              <label for="fullName">Full Name *</label>
+              <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+            </div>
+            
+            <div class="form-group">
+              <label for="company">Company Name</label>
+              <input type="text" id="company" name="company" placeholder="Your company name">
+            </div>
+            
+            <div class="form-group">
+              <label for="inquiryType">Inquiry Type *</label>
+              <select id="inquiryType" name="inquiryType" required>
+                <option value="" disabled selected>Select inquiry type</option>
+                <option value="Sales">Sales & Pricing</option>
+                <option value="Demo">Product Demo</option>
+                <option value="Support">Technical Support</option>
+                <option value="Partnership">Partnership Opportunity</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            
+            <div class="form-group full-width">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" placeholder="Please provide details about your inquiry..." required></textarea>
+            </div>
+            
+            <div class="form-group full-width">
+              <label class="checkbox-label">
+                <input type="checkbox" id="privacyPolicy" name="privacyPolicy" required>
+                <span>I agree to the <a href="privacy.html">Privacy Policy</a> and consent to CheckMet contacting me about my inquiry *</span>
+              </label>
+            </div>
+            
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </div>
+          </form>
+          
+          <p class="form-note">* Required fields</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Office Locations -->
+  <section class="section">
+    <div class="section-container">
+      <h2 class="section-title">Our Offices</h2>
+      <p class="section-subtitle">Visit us around the world</p>
+      
+      <div class="office-locations">
+        <div class="office">
+          <div class="office-image">
+            <img src="https://dummyimage.com/600x400/2563eb/fff&text=San+Francisco" alt="San Francisco Office" class="rounded-image">
+          </div>
+          <div class="office-details">
+            <h3 class="office-name">San Francisco (Headquarters)</h3>
+            <p class="office-address">
+              <i class="fas fa-map-marker-alt"></i> 100 Technology Drive, Suite 300<br>
+              San Francisco, CA 94103, USA
+            </p>
+            <p class="office-phone"><i class="fas fa-phone"></i> +1 (800) 555-1234</p>
+            <p class="office-email"><i class="fas fa-envelope"></i> info@checkmet.com</p>
+            <a href="https://maps.google.com/?q=100+Technology+Drive,+San+Francisco,+CA+94103" target="_blank" class="office-map-link">View on Map</a>
+          </div>
+        </div>
+        
+        <div class="office">
+          <div class="office-image">
+            <img src="https://dummyimage.com/600x400/2563eb/fff&text=New+York" alt="New York Office" class="rounded-image">
+          </div>
+          <div class="office-details">
+            <h3 class="office-name">New York</h3>
+            <p class="office-address">
+              <i class="fas fa-map-marker-alt"></i> 350 Fifth Avenue, 21st Floor<br>
+              New York, NY 10118, USA
+            </p>
+            <p class="office-phone"><i class="fas fa-phone"></i> +1 (212) 555-6789</p>
+            <p class="office-email"><i class="fas fa-envelope"></i> newyork@checkmet.com</p>
+            <a href="https://maps.google.com/?q=350+Fifth+Avenue,+New+York,+NY+10118" target="_blank" class="office-map-link">View on Map</a>
+          </div>
+        </div>
+        
+        <div class="office">
+          <div class="office-image">
+            <img src="https://dummyimage.com/600x400/2563eb/fff&text=London" alt="London Office" class="rounded-image">
+          </div>
+          <div class="office-details">
+            <h3 class="office-name">London</h3>
+            <p class="office-address">
+              <i class="fas fa-map-marker-alt"></i> 30 St Mary Axe<br>
+              London EC3A 8BF, United Kingdom
+            </p>
+            <p class="office-phone"><i class="fas fa-phone"></i> +44 (0) 20 7123 4567</p>
+            <p class="office-email"><i class="fas fa-envelope"></i> london@checkmet.com</p>
+            <a href="https://maps.google.com/?q=30+St+Mary+Axe,+London+EC3A+8BF" target="_blank" class="office-map-link">View on Map</a>
+          </div>
+        </div>
+        
+        <div class="office">
+          <div class="office-image">
+            <img src="https://dummyimage.com/600x400/2563eb/fff&text=Singapore" alt="Singapore Office" class="rounded-image">
+          </div>
+          <div class="office-details">
+            <h3 class="office-name">Singapore</h3>
+            <p class="office-address">
+              <i class="fas fa-map-marker-alt"></i> 1 Raffles Place, #20-61<br>
+              Singapore 048616
+            </p>
+            <p class="office-phone"><i class="fas fa-phone"></i> +65 6123 4567</p>
+            <p class="office-email"><i class="fas fa-envelope"></i> singapore@checkmet.com</p>
+            <a href="https://maps.google.com/?q=1+Raffles+Place,+Singapore+048616" target="_blank" class="office-map-link">View on Map</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FAQ Section -->
+  <section class="section bg-light">
+    <div class="section-container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-subtitle">Quick answers to common questions</p>
+      
+      <div class="contact-faq">
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3><i class="fas fa-question-circle"></i> How quickly will someone respond to my inquiry?</h3>
+          </div>
+          <div class="faq-answer">
+            <p>We aim to respond to all inquiries within 24 hours during business days. For urgent technical support issues, Enterprise customers have access to 24/7 support.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3><i class="fas fa-question-circle"></i> Can I schedule a product demonstration?</h3>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! We offer personalized demonstrations of the CheckMet platform. You can request a demo by visiting our <a href="demo.html">demo page</a> or by contacting our sales team directly.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3><i class="fas fa-question-circle"></i> Do you offer on-site consultations?</h3>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, for enterprise implementations, we can arrange for on-site consultations and support. Please contact our sales team to discuss your specific requirements.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3><i class="fas fa-question-circle"></i> How can I get technical support for an existing implementation?</h3>
+          </div>
+          <div class="faq-answer">
+            <p>Existing customers can access technical support through our customer portal, by email at support@checkmet.com, or by phone at +1 (800) 555-1235. Our support hours vary by plan level.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <h3><i class="fas fa-question-circle"></i> I'm interested in becoming a partner. How do I get started?</h3>
+          </div>
+          <div class="faq-answer">
+            <p>Visit our <a href="partners.html">Partners page</a> to learn about our partnership program and apply. You can also contact our partnership team directly at partners@checkmet.com.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Newsletter Signup -->
+  <section class="section">
+    <div class="section-container">
+      <div class="newsletter">
+        <div class="newsletter-content">
+          <h2 class="newsletter-title">Stay Updated</h2>
+          <p class="newsletter-text">Subscribe to our newsletter to receive updates on product features, industry insights, and company news.</p>
+        </div>
+        
+        <div class="newsletter-form">
+          <form id="newsletterForm">
+            <div class="newsletter-form-group">
+              <input type="email" id="newsletterEmail" name="email" placeholder="Your email address" required>
+              <button type="submit" class="newsletter-submit">Subscribe</button>
+            </div>
+            <label class="newsletter-consent">
+              <input type="checkbox" required>
+              <span>I agree to receive marketing communications from CheckMet</span>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div>
+        <a href="index.html" class="footer-logo">CheckMet</a>
+        <p>Advanced facial recognition attendance management system that simplifies employee tracking and enhances workplace efficiency.</p>
+        
+        <div class="footer-social">
+          <a href="#" class="footer-social-link"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="footer-social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="footer-social-link"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      
+      <div>
+        <h3 class="footer-column-title">Product</h3>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="features.html">Features</a></li>
+          <li class="footer-link"><a href="how-it-works.html">How It Works</a></li>
+          <li class="footer-link"><a href="solutions.html">Solutions</a></li>
+          <li class="footer-link"><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="footer-column-title">Resources</h3>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="#">Blog</a></li>
+          <li class="footer-link"><a href="#">Support Center</a></li>
+          <li class="footer-link"><a href="#">Documentation</a></li>
+          <li class="footer-link"><a href="#">API</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="footer-column-title">Company</h3>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="about.html">About Us</a></li>
+          <li class="footer-link"><a href="contact.html">Contact</a></li>
+          <li class="footer-link"><a href="careers.html">Careers</a></li>
+          <li class="footer-link"><a href="partners.html">Partners</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2025 CheckMet. All rights reserved.</p>
+      
+      <div class="footer-legal">
+        <a href="privacy.html" class="footer-legal-link">Privacy Policy</a>
+        <a href="terms.html" class="footer-legal-link">Terms of Service</a>
+        <a href="gdpr.html" class="footer-legal-link">GDPR Compliance</a>
+      </div>
+    </div>
   </footer>
+  
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+  <!-- Theme Switcher -->
+  <script src="js/dark-mode-fix.js"></script>
+  <script>
+    // Form submission handling
+    document.addEventListener('DOMContentLoaded', function() {
+      const contactForm = document.getElementById('contactForm');
+      const newsletterForm = document.getElementById('newsletterForm');
+      
+      // Contact form submission
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+          event.preventDefault();
+          
+          // Basic validation
+          const requiredFields = contactForm.querySelectorAll('[required]');
+          let valid = true;
+          
+          requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+              valid = false;
+              field.classList.add('error');
+            } else {
+              field.classList.remove('error');
+            }
+          });
+          
+          if (valid) {
+            // Show success message (in real implementation, would submit to backend)
+            contactForm.innerHTML = `
+              <div class="form-success">
+                <div class="form-success-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <h3>Thank You!</h3>
+                <p>Your message has been sent successfully. A member of our team will contact you shortly.</p>
+              </div>
+            `;
+            
+            // In real implementation, would send form data to server here
+          }
+        });
+        
+        // Remove error class on input
+        contactForm.querySelectorAll('input, select, textarea').forEach(element => {
+          element.addEventListener('input', function() {
+            this.classList.remove('error');
+          });
+        });
+      }
+      
+      // Newsletter form submission
+      if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(event) {
+          event.preventDefault();
+          
+          const emailInput = document.getElementById('newsletterEmail');
+          if (emailInput.value.trim()) {
+            // Show success message
+            newsletterForm.innerHTML = `
+              <div class="newsletter-success">
+                <i class="fas fa-check-circle"></i>
+                <p>Thank you for subscribing to our newsletter!</p>
+              </div>
+            `;
+            
+            // In real implementation, would send form data to server here
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CheckMet AI – Contact</title>
-  <link href="https://fonts.googleapis.com/css?family=Inter:400,700|Poppins:600,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {margin:0;font-family:'Inter','Poppins',Arial,sans-serif;background:linear-gradient(120deg,#0f2027 0%,#2c5364 100%);color:#1a1a1a;min-height:100vh;overflow-x:hidden;}
-    .navbar {display:flex;justify-content:space-between;align-items:center;padding:1.7rem 5vw 1.2rem 5vw;background:rgba(255,255,255,0.13);backdrop-filter:blur(12px);border-bottom:1.5px solid rgba(255,255,255,0.12);position:sticky;top:0;z-index:10;}
-    .logo {font-family:'Poppins',Arial,sans-serif;font-weight:800;font-size:2rem;letter-spacing:2px;color:#2563eb;text-shadow:0 2px 8px #2563eb22;}
-    nav {display:flex;gap:2.2rem;}
-    nav a {color:#fff;text-decoration:none;font-weight:600;font-size:1.08rem;transition:color 0.2s;position:relative;}
-    nav a::after {content:'';display:block;height:2px;width:0;background:linear-gradient(90deg,#2563eb,#00e676);transition:width 0.2s;position:absolute;left:0;bottom:-4px;}
-    nav a:hover::after {width:100%;}
-    .site-footer {background:linear-gradient(90deg,#2563eb 0%,#00e676 100%);color:#fff;padding:2.2rem 0 1.2rem 0;text-align:center;margin-top:3.5rem;}
-    .footer-content {display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:2.5rem;margin-bottom:1.3rem;}
-    .footer-logo {font-family:'Poppins',Arial,sans-serif;font-weight:800;font-size:1.4rem;color:#fff;letter-spacing:2px;}
-    .footer-links {display:flex;gap:1.7rem;}
-    .footer-links a {color:#fff;text-decoration:none;font-weight:600;opacity:0.92;transition:opacity 0.2s;}
-    .footer-links a:hover {opacity:1;text-decoration:underline;}
-    .footer-social {display:flex;gap:1.2rem;}
-    .footer-social-icon {font-size:1.5rem;color:#fff;opacity:0.85;transition:opacity 0.2s;}
-    .footer-social-icon:hover {opacity:1;}
-    .contact-hero {display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:40vh;padding:3vw 2vw 2vw 2vw;background:linear-gradient(120deg,#2563eb33 0%,#00e67611 100%);position:relative;overflow:hidden;}
-    .contact-hero-title {font-family:'Poppins',Arial,sans-serif;font-size:2.3rem;font-weight:800;color:#fff;margin:0 0 1.2rem 0;letter-spacing:-1px;line-height:1.1;text-shadow:0 2px 24px #2563eb55;}
-    .contact-hero-subtitle {font-size:1.13rem;color:#e0f2fe;margin-bottom:2rem;font-weight:500;opacity:0.95;max-width:600px;}
-    .contact-hero-visual {margin:2.5rem auto 1.5rem auto;max-width:340px;width:100%;border-radius:1.2rem;box-shadow:0 6px 24px rgba(41,121,255,0.15);background:#fff;overflow:hidden;position:relative;}
-    .contact-hero-visual svg {width:100%;display:block;border-radius:1.2rem;}
-    .contact-form-section {max-width:440px;margin:3rem auto 2.5rem auto;background:rgba(255,255,255,0.27);border-radius:1.5rem;box-shadow:0 4px 24px 0 rgba(41,121,255,0.10);padding:2rem 1.2rem;text-align:center;position:relative;}
-    .contact-form {display:flex;flex-direction:column;gap:1.3rem;}
-    .contact-form label {font-weight:600;color:#2563eb;text-align:left;margin-bottom:0.3rem;display:block;}
-    .contact-form input, .contact-form textarea {width:100%;padding:0.8rem 1rem;border-radius:0.7rem;border:1.5px solid #2563eb33;font-size:1.03rem;font-family:'Inter',Arial,sans-serif;transition:border 0.2s;}
-    .contact-form input:focus, .contact-form textarea:focus {outline:none;border:1.5px solid #00e676;background:#e0f7fa;}
-    .contact-form textarea {min-height:100px;resize:vertical;}
-    .contact-form button {background:linear-gradient(90deg,#2563eb,#00e676);color:#fff;font-weight:700;border:none;border-radius:2rem;padding:0.9rem 2.2rem;font-size:1.15rem;cursor:pointer;box-shadow:0 4px 24px 0 rgba(41,121,255,0.18);transition:background 0.2s, transform 0.2s;border:1.5px solid rgba(255,255,255,0.18);margin-top:0.6rem;}
-    .contact-form button:hover {background:linear-gradient(90deg,#00e676,#2563eb);transform:translateY(-2px) scale(1.04);}
-    .trusted-row {display:flex;align-items:center;justify-content:center;gap:2rem;margin:2.2rem 0 1.2rem 0;}
-    .trusted-label {color:#fff;font-weight:700;font-size:1.1rem;opacity:0.85;margin-right:0.7rem;}
-    .trusted-row img {max-width:90px;max-height:36px;filter:grayscale(1) brightness(1.1);opacity:0.8;margin:0 auto;display:block;}
-    .testimonial {background:rgba(255,255,255,0.18);border-radius:1.2rem;padding:1.1rem 1.4rem;color:#fff;font-size:1.13rem;font-style:italic;margin:1.5rem auto 0 auto;max-width:540px;box-shadow:0 2px 14px 0 #2563eb22;}
-    .testimonial-author {font-weight:700;color:#00e676;font-style:normal;margin-left:0.5rem;}
-    @media (max-width:900px) {.contact-form-section{margin:2rem 1vw;}}
-    @media (max-width:600px) {.navbar{flex-direction:column;align-items:flex-start;padding:1.2rem 5vw 1rem 5vw;}nav{gap:1.1rem;}.contact-hero-title{font-size:1.7rem;}.contact-hero-subtitle{font-size:1rem;}.trusted-row{gap:1rem;flex-wrap:wrap;}}
-  </style>
-</head>
-

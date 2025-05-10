@@ -3,37 +3,325 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Privacy – Checkmet</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="CheckMet's Privacy Policy - Learn how we protect your data in our facial recognition attendance system and our compliance with data protection regulations.">
+  <title>Privacy Policy | CheckMet - Facial Recognition Attendance System</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/glassmorphism.css">
+  <link rel="stylesheet" href="css/theme-toggle.css">
+  <link rel="stylesheet" href="css/glassmorphism.css">
+  <link rel="stylesheet" href="css/theme-toggle.css">
+  <link rel="stylesheet" href="css/glassmorphism.css">
+  <link rel="stylesheet" href="css/theme-toggle.css">
 </head>
-<body>
-  <header>
-  <nav style="display:flex;gap:18px;justify-content:center;margin:24px 0;">
-    <a href="index.html">Home</a>
-    <a href="features.html">Features</a>
-    <a href="demo.html">Demo</a>
-    <a href="contact.html">Contact</a>
-    <a href="accuracy.html">Accuracy</a>
-    <a href="privacy.html">Privacy</a>
-    <a href="speed.html">Speed</a>
-    <a href="how-it-works.html">How It Works</a>
-    <a href="comparison.html">Comparison</a>
-    <a href="testimonials.html">Testimonials</a>
-    <a href="trusted-logos.html">Trusted Partners</a>
-  </nav>
-</header>
-  <main>
-    <h1>Privacy</h1>
-    <p>Your data is encrypted and handled with the strictest privacy standards. Checkmet is GDPR-compliant and never shares your information.</p>
-    <ul>
-      <li>End-to-end encryption</li>
-      <li>Data anonymization</li>
-      <li>User consent controls</li>
-    </ul>
-  </main>
-  <footer class="site-footer">
 
-    <p style="margin-top:18px;color:#64748b;font-size:1rem;">&copy; 2025 <b style="color:#2563eb;">Checkmet</b></p>
+<body class="light-theme">
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-logo">Check<span>Met</span></a>
+      
+      <div class="navbar-links">
+        <a href="features.html" class="navbar-link">Features</a>
+        <a href="how-it-works.html" class="navbar-link">How It Works</a>
+        <a href="solutions.html" class="navbar-link">Solutions</a>
+        <a href="security.html" class="navbar-link">Security</a>
+        <a href="pricing.html" class="navbar-link">Pricing</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon dark-icon"></i>
+          <i class="fas fa-sun light-icon"></i>
+        </button>
+        <a href="demo.html" class="btn-demo">Request Demo</a>
+      </div>
+      
+      <button class="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+  
+  <!-- Page Header -->
+  <section class="page-header privacy-header">
+    <div class="page-header-container">
+      <h1 class="page-title">Privacy Policy</h1>
+      <p class="page-subtitle">Last Updated: June 1, 2025</p>
+    </div>
+  </section>
+  
+  <!-- Privacy Policy Content -->
+  <section class="section">
+    <div class="section-container">
+      <div class="privacy-content">
+        <div class="privacy-introduction">
+          <h2>Introduction</h2>
+          <p>CheckMet ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our facial recognition attendance management system, website, and related services (collectively, the "Services").</p>
+          <p>We take the collection and processing of biometric data very seriously. Our Privacy Policy is designed to comply with data protection regulations, including the General Data Protection Regulation (GDPR) and various biometric privacy laws.</p>
+          <p>Please read this Privacy Policy carefully. By using our Services, you consent to the data practices described in this policy. If you do not agree with the terms of this Privacy Policy, please do not access or use our Services.</p>
+        </div>
+        
+        <div class="privacy-toc">
+          <h2>Table of Contents</h2>
+          <ul>
+            <li><a href="#information-collected">Information We Collect</a></li>
+            <li><a href="#use-of-information">How We Use Your Information</a></li>
+            <li><a href="#sharing-information">Sharing Your Information</a></li>
+            <li><a href="#biometric-data">Special Provisions for Biometric Data</a></li>
+            <li><a href="#data-security">Data Security</a></li>
+            <li><a href="#your-rights">Your Data Protection Rights</a></li>
+            <li><a href="#data-retention">Data Retention</a></li>
+            <li><a href="#children">Children's Privacy</a></li>
+            <li><a href="#changes">Changes to This Privacy Policy</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div id="information-collected" class="privacy-section">
+          <h2>Information We Collect</h2>
+          
+          <h3>Personal Information</h3>
+          <p>We may collect personal information that you voluntarily provide to us when you register for our Services, express interest in obtaining information about us or our products, or otherwise contact us. The personal information we collect may include:</p>
+          <ul>
+            <li>Name, email address, mailing address, and phone number</li>
+            <li>Job title and employer information</li>
+            <li>Account login credentials</li>
+            <li>Employee ID or other identifiers used within your organization</li>
+            <li>Attendance records, including check-in and check-out times</li>
+          </ul>
+          
+          <h3>Biometric Data</h3>
+          <p>When users enroll in the CheckMet facial recognition system, we collect biometric data in the form of facial scans. This data is immediately processed to create encrypted mathematical templates that are used for subsequent identification. The original facial images are not retained after template creation.</p>
+          
+          <h3>Automatically Collected Information</h3>
+          <p>When you use our Services, we may automatically collect certain information, including:</p>
+          <ul>
+            <li>Device information such as your mobile device ID, IP address, and browser type</li>
+            <li>Log data, including the pages you visit and the time spent on those pages</li>
+            <li>Location data (with your permission) for certain features of our Services</li>
+            <li>Usage patterns within our web and mobile applications</li>
+          </ul>
+          
+          <h3>Cookies and Similar Technologies</h3>
+          <p>We use cookies and similar tracking technologies to track the activity on our Services and hold certain information. Cookies are files with a small amount of data which may include an anonymous unique identifier. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent.</p>
+        </div>
+        
+        <div id="use-of-information" class="privacy-section">
+          <h2>How We Use Your Information</h2>
+          <p>We use the information we collect for various purposes, including:</p>
+          <ul>
+            <li>Providing, operating, and maintaining our Services</li>
+            <li>Facilitating employee attendance tracking and verification</li>
+            <li>Improving, personalizing, and expanding our Services</li>
+            <li>Understanding and analyzing how you use our Services</li>
+            <li>Developing new products, services, features, and functionality</li>
+            <li>Communicating with you about updates, security alerts, and support</li>
+            <li>Providing customer support and responding to inquiries</li>
+            <li>Compliance with legal obligations</li>
+            <li>Prevention of fraud and security incidents</li>
+          </ul>
+          
+          <h3>Legal Bases for Processing</h3>
+          <p>We process your personal information under the following legal bases:</p>
+          <ul>
+            <li><strong>Performance of a Contract:</strong> Processing necessary for the performance of a contract with you or your employer</li>
+            <li><strong>Legitimate Interests:</strong> Processing necessary for our legitimate interests, provided those interests are not overridden by your rights and interests</li>
+            <li><strong>Consent:</strong> Processing based on your consent, particularly for biometric data</li>
+            <li><strong>Legal Obligations:</strong> Processing necessary to comply with our legal obligations</li>
+          </ul>
+        </div>
+        
+        <div id="sharing-information" class="privacy-section">
+          <h2>Sharing Your Information</h2>
+          <p>We may share your information in the following situations:</p>
+          
+          <h3>With Your Employer</h3>
+          <p>As the controller of your personal data, your employer has access to your attendance records and related information processed through our system.</p>
+          
+          <h3>Service Providers</h3>
+          <p>We may share your information with third-party vendors, service providers, and contractors who perform services for us and need access to such information to do that work.</p>
+          
+          <h3>Business Transfers</h3>
+          <p>If we are involved in a merger, acquisition, or sale of all or a portion of our assets, your information may be transferred as part of that transaction.</p>
+          
+          <h3>Legal Requirements</h3>
+          <p>We may disclose your information where required to do so by law or in response to valid requests by public authorities.</p>
+          
+          <h3>With Your Consent</h3>
+          <p>We may share your information with other parties for other reasons if you have given us your consent to do so.</p>
+          
+          <h3>Data Transfers</h3>
+          <p>Your information may be transferred to—and maintained on—computers located outside of your state, province, country, or other governmental jurisdiction. If you are located outside the United States and choose to provide information to us, please note that we transfer the data to the United States and process it there.</p>
+        </div>
+        
+        <div id="biometric-data" class="privacy-section">
+          <h2>Special Provisions for Biometric Data</h2>
+          <p>Given the sensitive nature of biometric data, we implement special provisions for its processing:</p>
+          
+          <h3>Explicit Consent</h3>
+          <p>We require explicit consent from individuals before collecting and processing their biometric data. This consent is typically obtained by your employer during the enrollment process.</p>
+          
+          <h3>No Facial Image Storage</h3>
+          <p>We do not store actual facial images. During enrollment, facial scans are immediately converted into encrypted mathematical templates that cannot be reverse-engineered into an actual image.</p>
+          
+          <h3>Limited Use</h3>
+          <p>Biometric templates are used solely for the purpose of attendance verification and are not used for any other purpose without additional consent.</p>
+          
+          <h3>Enhanced Security</h3>
+          <p>Biometric templates are protected with industry-leading encryption and security measures to prevent unauthorized access or disclosure.</p>
+          
+          <h3>Alternative Methods</h3>
+          <p>We provide alternative non-biometric methods for attendance tracking for individuals who do not consent to facial recognition.</p>
+        </div>
+        
+        <div id="data-security" class="privacy-section">
+          <h2>Data Security</h2>
+          <p>We have implemented appropriate technical and organizational security measures designed to protect the security of any personal information we process. However, despite our safeguards and efforts to secure your information, no electronic transmission over the Internet or information storage technology can be guaranteed to be 100% secure.</p>
+          
+          <p>Our security measures include:</p>
+          <ul>
+            <li>Encryption of data in transit and at rest</li>
+            <li>Regular security assessments and penetration testing</li>
+            <li>Access controls and authentication mechanisms</li>
+            <li>Employee training on data protection</li>
+            <li>Incident response procedures</li>
+          </ul>
+        </div>
+        
+        <div id="your-rights" class="privacy-section">
+          <h2>Your Data Protection Rights</h2>
+          <p>Depending on your location and applicable laws, you may have the following rights regarding your personal information:</p>
+          
+          <h3>Right to Access</h3>
+          <p>You have the right to request information about the personal data we hold about you and to receive a copy of that personal data.</p>
+          
+          <h3>Right to Rectification</h3>
+          <p>You have the right to request that we correct any information you believe is inaccurate or complete information you believe is incomplete.</p>
+          
+          <h3>Right to Erasure</h3>
+          <p>You have the right to request that we erase your personal data, under certain conditions.</p>
+          
+          <h3>Right to Restrict Processing</h3>
+          <p>You have the right to request that we restrict the processing of your personal data, under certain conditions.</p>
+          
+          <h3>Right to Data Portability</h3>
+          <p>You have the right to request that we transfer the data we have collected to another organization, or directly to you, under certain conditions.</p>
+          
+          <h3>Right to Object</h3>
+          <p>You have the right to object to our processing of your personal data, under certain conditions.</p>
+          
+          <h3>Right to Withdraw Consent</h3>
+          <p>You have the right to withdraw your consent at any time if we rely on consent to process your personal information.</p>
+          
+          <p>To exercise any of these rights, please contact your employer (the data controller) or reach out to us directly using the contact information provided at the end of this Privacy Policy.</p>
+        </div>
+        
+        <div id="data-retention" class="privacy-section">
+          <h2>Data Retention</h2>
+          <p>We will retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy. The specific retention period depends on the type of data:</p>
+          
+          <ul>
+            <li><strong>Account Information:</strong> Retained for the duration of your or your employer's use of our Services, plus a reasonable period thereafter for legal or business purposes.</li>
+            <li><strong>Biometric Templates:</strong> Retained only for the duration of your employment or until your employer terminates the service, unless otherwise specified in your employer's data retention policy.</li>
+            <li><strong>Attendance Records:</strong> Typically retained in accordance with your employer's retention policies and applicable employment laws.</li>
+          </ul>
+          
+          <p>We will also retain and use your personal information to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our legal agreements and policies.</p>
+        </div>
+        
+        <div id="children" class="privacy-section">
+          <h2>Children's Privacy</h2>
+          <p>Our Services are not directed to individuals under the age of 16. We do not knowingly collect personal information from children under 16. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we can take appropriate action.</p>
+        </div>
+        
+        <div id="changes" class="privacy-section">
+          <h2>Changes to This Privacy Policy</h2>
+          <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date at the top of this page. You are advised to review this Privacy Policy periodically for any changes.</p>
+          <p>Changes to this Privacy Policy are effective when they are posted on this page. If we make material changes to this Privacy Policy, we will notify you through a notice on our website or by email.</p>
+        </div>
+        
+        <div id="contact" class="privacy-section">
+          <h2>Contact Us</h2>
+          <p>If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:</p>
+          
+          <div class="contact-details">
+            <p><strong>CheckMet Data Protection Officer</strong><br>
+            Email: <a href="mailto:privacy@checkmet.com">privacy@checkmet.com</a><br>
+            Phone: +1 (800) 555-1234<br>
+            Address: 100 Technology Drive, Suite 300, San Francisco, CA 94103, USA</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div>
+        <a href="index.html" class="footer-logo">CheckMet</a>
+        <p>Advanced facial recognition attendance management system that simplifies employee tracking and enhances workplace efficiency.</p>
+        
+        <div class="footer-social">
+          <a href="#" class="footer-social-link"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="footer-social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="footer-social-link"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      
+      <div>
+        <h3 class="footer-column-title">Product</h3>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="features.html">Features</a></li>
+          <li class="footer-link"><a href="how-it-works.html">How It Works</a></li>
+          <li class="footer-link"><a href="solutions.html">Solutions</a></li>
+          <li class="footer-link"><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="footer-column-title">Resources</h3>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="#">Blog</a></li>
+          <li class="footer-link"><a href="#">Support Center</a></li>
+          <li class="footer-link"><a href="#">Documentation</a></li>
+          <li class="footer-link"><a href="#">API</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="footer-column-title">Company</h3>
+        <ul class="footer-links">
+          <li class="footer-link"><a href="about.html">About Us</a></li>
+          <li class="footer-link"><a href="contact.html">Contact</a></li>
+          <li class="footer-link"><a href="careers.html">Careers</a></li>
+          <li class="footer-link"><a href="partners.html">Partners</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2025 CheckMet. All rights reserved.</p>
+      
+      <div class="footer-legal">
+        <a href="privacy.html" class="footer-legal-link active">Privacy Policy</a>
+        <a href="terms.html" class="footer-legal-link">Terms of Service</a>
+        <a href="gdpr.html" class="footer-legal-link">GDPR Compliance</a>
+      </div>
+    </div>
   </footer>
+  
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+  <!-- Theme Switcher -->
+  <script src="js/dark-mode-fix.js"></script>
 </body>
 </html>

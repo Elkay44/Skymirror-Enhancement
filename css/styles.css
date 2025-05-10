@@ -159,6 +159,20 @@ img {
   height: auto;
 }
 
+.case-study-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  transition: transform 0.3s ease;
+}
+
+.case-study-card:nth-child(2) .case-study-image img,
+.case-study-card:nth-child(3) .case-study-image img {
+  max-width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
 button, .btn {
   display: inline-block;
   font-weight: 600;
